@@ -1,0 +1,52 @@
+VirtualBox Machine
+------------------
+* Install windows "xp32" (digitalocean.com)
+	- Disable Enable VT-x
+	- Disable Audio
+	- Add second interface (host-only - ip 192.168.56.101) - This is the only needed, we can share inet using this iface and some iptables
+	- Select WinXPsp3 ISO
+* Create user: user/user
+* Disable windows firewall
+* Save snapshot "cleaninstall"
+* Configure a private intefaz, if done, skip this
+	* Shutdown
+	* VirtualBox file>preferences>network>host only>add "vboxnet0" (network 192.168.51.1)
+	* VM "xp32" settings > network > adapter2 > enable > host-only > select "vboxnet0"
+* Start VM
+	* Edit network connections > local area network 2 > tcpip > properties > ip address: 192.168.56.101
+	* Start VM
+* Optional: Update internet browser (ex: firefox) if needed
+* Download and install python 2.7.x
+* Download "sinjector.zip" and copy the files to "c:\sinjector". The ZIP contains the following files:
+	- sinjector.exe
+	- injector.ini
+	- dlltoinject.dll
+	- server.py
+* Close all programs
+* Launch "server.py"
+* Check from host the connection. Ex: "nc 192.168.56.101 8000" or "ping"
+* Take an snapshot. Write its name. Ex: "vbox"
+* Close the VM (savestate)
+* Go to host machine
+* Edit "client.py":
+	- Change VMACHINE name:
+		VMACHINE="xp32sp3"
+	- Change SNAPSHOT name: 
+		SNAPSHOT="vbox"
+* Note: take care with shared folders with write privileges (better read only) in snapshot configuration
+
+HOST
+----
+* install radare2 from github
+* apt-get install pip
+* pip install pefile
+* install "monodis" from mono:
+	- apt-get install mono-complete
+	- github?
+	* monodis may fail dissasembling some binaries
+* run the script to share the networking for the hostonly interfaz in the VM
+	sudo sysctl -w net.inet.ip.forwarding=1
+	echo "Edit /etc/pf.confg and add the following line belowe nat-anchor:"
+	echo "nat on en0 from vboxnet0:network -> (en0)"
+	echo "Reload: sudo pfctl -f /etc/pf.conf"
+	echo "Enable: sudo pfctl -e"

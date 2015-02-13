@@ -1,0 +1,5 @@
+* match the pcap with the time of the api calls
+* Save the time when starting analysis, and if other sample is requested
+  to analyze, check this value. If the time is greater than 3 minutes (for example)
+  allow to analyze the next sample
+(partial done) * Create web GUI to upload, send samples, and read results

@@ -1,0 +1,113 @@
+* Review samples sort by date...
+* (done) Implement MoveFile[AW]
+* (done) add compiler detection using yara rules
+	- https://github.com/AlienVault-Labs/AlienVaultLabs/tree/master/peid2yar
+* (done) add option for dump registry entries (ex. for viewing RT_BITMAPs)
+* (done) add option in graph for view data as HEX
+* process "dwwin.exe" is doctor watson crash, should be shown in sandbox/processs
+* intelligence for registry, if exe written for persistence, should be shown in the files section
+* moved files not represented in sandbox/files web gui
+* art web gui
+   + dinamyc:
+	- created files relatonship. Ex: file created and located in registry (regset...)
+   + static:
+	- (ignored) add internal name, some banner
+	- (done) padding comparation versus assigned size (more graphs)?
+* (temporary ignored) cache the registry calls (main list) for speedup
+* add intelligence to registry parser, not the template
+	- (done) monitor uninstall registry key: HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall
+* kill any tcpdump process when launching client.py
+* (done) better do not hook the pythonw.exe process. See sample: 353f... (add to injector.ini?)
+	- This sample is crashing now (may be because the svchost hook?)
+* crash when hooking svchost.exe resposible of taskmanager
+	- without registry hooks (crashes)
+	- without any hook (not crashes -> some hook must be inestable)
+	- without reg and file hook -> doesn't crash but something is not well executed...
+	- without createfile* (crashes)
+	- without copyfile* and movefile* (crashes)
+	- check the deletefile functions? the registry again? :/
+* (done) Add intelligence for resources with fileoffset negative and mark in red in the web gui
+* (done) Add alive status for processes, read processes_final.txt file
+* Add comments box or notes for the sections in the web gui
+* (done) in affected_processes add all processes (maybe explorer.exe was previously hooked)
+* (fixed?) bug when injecting dll into explorer.exe and running some samples? (ex: 4eb07...)
+  - note1: disable registry hooking removes the error (try hook explorer.exe launch and close ollydbg.exe)
+  - note2: bug must be in regsetW or regqueryW
+  - note3: may be error in regqueryvalueexw -> bad WSTRING to char convertion size
+* (done, also if resource size > 75% size of file) RT_RCDATA resources highlight in web gui
+* Add more OpenProcess dwdesiredaccess flags to logfile
+* Implement:
+	- RegQueryValue[AW]
+	- RegSetValue[AW]
+* (skipped, unstable) Implement strings comparison?
+* (done) Implement LoadLibraryW
+(done) * Create a file with the hooks implemented for displaying better output in the web gui
+* (needed?) Implement CreateProcessAsUserSecure
+* (done) Implement CreateProcessAsUserW
+* (needed?) Implement CreateProcessInternalWSecure
+(done) * sort the imports by name and libname, in the web gui
+* (done) fix this (handle or hinternet?)
+	[26588 ] [InternetConnectA] handle=13369352 "stat.miniload.org" "80"
+	[26588 ] [InternetConnectW] hInternet=13369352 "stat.miniload.org" "80"
+* (done) wrong navigation on graph (jumps too big for seeing all the data)
+(done) * fix open dialog at registry when clicking on same result...
+(done) * (not needed, detected with createprocessw) Implement: shellexecute[A|W|ExA]
+(done) * Implement: regcreatekeyex 
+(done) * parse from log the copied files
+* (done) Implement: copyfile
+* (done) implement: copyfile*
+* (ignore) Check if shellexecute returns a value <=32 (indicates an error)
+(partial?)* RegSetValue on handles not identified... :p
+* Implement: CreateFileA, RegConnectRegistry, MoveFileEx, DnsQuery, listen, accept, send, recv, recvfrom, WSArecv, WSAsend, bind, internetopen, internetopenurl, internetreadfile, urldownloadtofile, CreateToolhelp32Snapshot, SetWindowsHookExA, winexec, createprocessasuser, createprocesswithlogon, createprocessinternal, createprocessasusersecure, OpenSCManagerA, StartServiceA, ControlService, OpenServiceA, ChangeServiceConfigA, ChangeServiceConfig2A, DeleteService, GetKeyboardState, GetKeyState, GetAsyncKeyState, GetForegroundWindow, CreateMutexA, ZwLoadDriver, ZwSetSystemInformation, ReadFileEx, ReadFile, WriteFile
+	- (untested-partial) RegConnectRegistry
+	- (done) MoveFileEx
+	- (done) CreateFile
+	- (ignored) ReadFile* and WriteFile
+	- (untested-partial) CreateProcessAsUser
+	- (done) WinExec (problem: the new process is not detected by createprocess)
+	- (done) createprocessinternalA
+(done) * detect unicode strings
+(done) * load getproccaddress after all the hooks in sinjector
+(done) * monitor api for GET and POST
+(done) * remove api logging of inet_addr?
+(done) * remove duplicated libraries in sandbox results
+(fixed?) * bug in detect deleted files script?
+* (needed?) Implement: CreateProcessAsUserSecure
+(done) * Implement: unsigned long inet_addr( _In_  const char *cp);
+(done) * log getprocaddress, match handle with loadlibrary handles in dlltoinject
+* do not save remote files not found. Content is: [Errno 2] No such file or directory:...
+* log mutex? created and open (also the result)
+(done) * detect language of resources
+* implement dump of RC_STRING in resources
+* add options to display filtered results in sandbox processes web gui
+(done) * tcpdump for vm "vboxnet0" iface - require share inet in host for this iface via iptables
+* hook by handle on CreateRemoteThread?
+(done) * log written registry keys?
+* created/deleted folders?
+* UNSTABLE: Install .net frameworks: 2.0 sp2, 3.5, 4.0 (windows xp 32 bit)
+(done registry hooks fixed) * sample "d33.." and "05a9..." fail in the last compilation of sinjector (bug on registry functions?)
+* cmdline in createprocess without quotes on this app failure:
+[320   ] [CreateProcessW] PID=15876 Handle=776 Thread=2872 "" C:\WINDOWS\system32\dwwin.exe -x -s 1968
+* (dotnet missing) online sample "7981b1d50b8be819192dd0acecc27068" without results. check it :p
+(done) * make script to parse registry entries
+(done) * The main process doesn't appears in the list
+(done) * DLL repeated after parsing (some without extension)->make python script (current is bash)
+(launched in bg, not shown again) * remove "sinjector.exe" ini file information on debuglevel=0
+(done) * Kill other python instances before launching a new one...
+(done) * Refresh only new lines on client.py output, not all log
+(done) * Count timeouts, if limit reached, stop execution
+(done) * If client is called outside directory can't access files
+(done) * The VM may DIE, can't download files->check connection... (?)
+(done) * The connection may HANGUP at beginning
+(done) * Screenshot after launch the binary
+(done online clean install) * Close any unnecesary app or service in saved virtual machine (ex: sandboxie)
+(done) * Do not log Sleep 0
+(partial) * Implement winsock API logging
+* check results for sample df4... 
+	* When deleting a file, only one backup is created (last overwrites always) and only one is retrieved, fix this in DLL to inject (backup all) and retrieve all from client
+* (check this) Some created procceses have PID=0 (malware bug, openprocess for deleted file?) -> do not REINJECT on PID=0
+(registry added)* Add registry log and getprocaddress?
+(done) * Remove popup warnings from "sinjector.exe"
+* Install .net for this sample??
+01afa971a98e0485a0655066a8424d910126668af0753965f60b4e3b5fe3c66e.bin
+
