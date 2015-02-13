@@ -1,14 +1,13 @@
 VirtualBox Machine
 ------------------
-* Install windows "xp32" (digitalocean.com)
+* Install windows "xp32"
 	- Disable Enable VT-x
 	- Disable Audio
 	- Add second interface (host-only - ip 192.168.56.101) - This is the only needed, we can share inet using this iface and some iptables
-	- Select WinXPsp3 ISO
 * Create user: user/user
 * Disable windows firewall
-* Save snapshot "cleaninstall"
-* Configure a private intefaz, if done, skip this
+* Save snapshot "cleaninstall" (some clean install)
+* Configure a private inteface, if done, skip this
 	* Shutdown
 	* VirtualBox file>preferences>network>host only>add "vboxnet0" (network 192.168.51.1)
 	* VM "xp32" settings > network > adapter2 > enable > host-only > select "vboxnet0"
