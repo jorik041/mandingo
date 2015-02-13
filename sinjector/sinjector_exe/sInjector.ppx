@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1.0">
+	<category name="..\includes\misc.c" />
+	<category name="main.c">
+		<category name="Window">
+			<property name="Left" type="integer">-4</property>
+			<property name="Top" type="integer">-30</property>
+			<property name="Right" type="integer">1036</property>
+			<property name="Bottom" type="integer">414</property>
+			<property name="Maximized" type="integer">1</property>
+			<property name="Active" type="integer">1</property>
+		</category>
+	</category>
+	<category name="..\includes\logger.c">
+		<category name="Window">
+			<property name="Left" type="integer">44</property>
+			<property name="Top" type="integer">58</property>
+			<property name="Right" type="integer">1004</property>
+			<property name="Bottom" type="integer">364</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+</settings>
