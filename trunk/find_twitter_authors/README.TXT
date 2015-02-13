@@ -4,7 +4,7 @@ TWITTER FIND AUTHORS
 
 Comments:
 
-This application extract the URLs of your Tweets, and uses the search engine to find the 1st tweet that posted that link.. easy ^^
+This application extract the URLs of your last tweets, and locates the 1st tweet that posted that URL, giving you the name of the possible author.. easy ^^
 
 Requeriments:
 
