@@ -8,7 +8,7 @@ This application extract the URLs of your Tweets, and uses the search engine to 
 
 Requeriments:
 
-Create a twitter application for getting the required keys to inteact with the Twitter API, and write the keys in the python script.
+Create a twitter application for getting the required keys to interact with the Twitter API, and write the keys in the python script.
 
 Usage example:
 
