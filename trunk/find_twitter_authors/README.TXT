@@ -1,6 +1,6 @@
 TWITTER FIND AUTHORS
 
-"Because sometimes you'd like to know how is the author of the retweet"
+"Because sometimes you'd like to know how is the author of the (re)tweet"
 
 Comments:
 
