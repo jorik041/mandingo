@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1.0">
+	<category name="main.c" />
+	<category name="hooker.c">
+		<category name="Window">
+			<property name="Left" type="integer">88</property>
+			<property name="Top" type="integer">116</property>
+			<property name="Right" type="integer">862</property>
+			<property name="Bottom" type="integer">421</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="iathook.c" />
+	<category name="getiat.c" />
+	<category name="getiat.h" />
+	<category name="iathook.h" />
+	<category name="apis.h" />
+	<category name="..\includes\misc.c">
+		<category name="Window">
+			<property name="Left" type="integer">0</property>
+			<property name="Top" type="integer">0</property>
+			<property name="Right" type="integer">774</property>
+			<property name="Bottom" type="integer">305</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="hooker.h" />
+	<category name="..\includes\inifile.c">
+		<category name="Window">
+			<property name="Left" type="integer">22</property>
+			<property name="Top" type="integer">29</property>
+			<property name="Right" type="integer">796</property>
+			<property name="Bottom" type="integer">334</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="..\includes\inifile.h" />
+	<category name="..\includes\misc.h">
+		<category name="Window">
+			<property name="Left" type="integer">44</property>
+			<property name="Top" type="integer">58</property>
+			<property name="Right" type="integer">818</property>
+			<property name="Bottom" type="integer">363</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="logger.h" />
+	<category name="logger.c" />
+	<category name="..\includes\logger.c">
+		<category name="Window">
+			<property name="Left" type="integer">-4</property>
+			<property name="Top" type="integer">-30</property>
+			<property name="Right" type="integer">1036</property>
+			<property name="Bottom" type="integer">411</property>
+			<property name="Maximized" type="integer">1</property>
+			<property name="Active" type="integer">1</property>
+		</category>
+	</category>
+	<category name="inlinehook.c">
+		<category name="Window">
+			<property name="Left" type="integer">88</property>
+			<property name="Top" type="integer">116</property>
+			<property name="Right" type="integer">862</property>
+			<property name="Bottom" type="integer">421</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="hooks_registry.h" />
+	<category name="hooks_registry.c">
+		<category name="Window">
+			<property name="Left" type="integer">0</property>
+			<property name="Top" type="integer">0</property>
+			<property name="Right" type="integer">774</property>
+			<property name="Bottom" type="integer">305</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="hooks_networking.h" />
+	<category name="hooks_fileops.h">
+		<category name="Window">
+			<property name="Left" type="integer">22</property>
+			<property name="Top" type="integer">29</property>
+			<property name="Right" type="integer">796</property>
+			<property name="Bottom" type="integer">334</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="hooks_networking.c" />
+	<category name="hooks_fileops.c" />
+	<category name="hooks_loadlib.h" />
+	<category name="hooks_process.h" />
+	<category name="hooks_process.c" />
+	<category name="hooks_loadlib.c" />
+	<category name="inlinehook.h" />
+	<category name="hooks_strings.h" />
+	<category name="hooks_strings.c" />
+</settings>
