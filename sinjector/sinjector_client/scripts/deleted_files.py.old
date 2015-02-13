@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+import re
+import sys
+
+def createdFiles(filename):
+	log=""
+	with open(filename,"r") as f:
+		log=f.read()
+	f.close()
+	files=set()
+	for line in log.split("\r\n"):
+		if len(re.findall("\[DeleteFile",line)):
+			res=re.findall(".*\]\s+(.*)",line)
+			if res[0][:2]=="\\\\":
+				continue
+			files.add(res[0])
+	return files
+
+if len(sys.argv)<2:
+	print "Usage: %s <sinjector_logfile>" % sys.argv[0]
+	sys.exit()
+
+files=createdFiles(sys.argv[1])
+
+for file in files:
+	print file
+
