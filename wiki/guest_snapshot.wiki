@@ -36,6 +36,6 @@ At this moment, you should have :
   # in "*saved*" state
   # with the process "server.pyw" launched
   # the sinjector files in "C:\temp"
-  # internet connectivity, IP address properly configured, etc. 
+  # IP address properly configured, internet connectivity, etc. 
 
 Ready for submitting and analyzing malware samples :)
