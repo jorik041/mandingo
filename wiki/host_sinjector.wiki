@@ -82,6 +82,6 @@ sudo pip install dpkt
 
 Install "monodevelop" and "radare2" in your system.
 
-  * "Monodevelop" can be easily downloading the installer package from their web page.
+  * "Monodevelop" can be easily downloaded and installed from the package located in the http://www.monodevelop.com web page.
   * You can find "radare2" in github
  
