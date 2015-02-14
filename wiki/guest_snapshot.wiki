@@ -1,0 +1,41 @@
+#steps to prepare a working windows snapshot
+
+= Introduction =
+
+In this section I will tell you how to configure a working snapshot for analyzing the malware samples.
+
+
+= Instructions =
+
+A woking snapshot requires:
+
+  * That you have already have a windows xp3 virtual box imagen running with:
+    * Networking enabled
+    * Internet connectivity
+    * The sinjector required files copied at "C:\sinjector":
+      * sinjector.exe
+      * dlltoinject.dll
+      * injector.ini
+      * server.pyw
+    * All this steps were covered in the section [virtual_config Virtual guest operating system configuration] and *should be done only one time*
+
+If the previous requirement was completed, you are almost ready to take the snapshot.
+
+Now, you should launch the python server application called "*server.pyw*" located at "C:\sinjector", double clicking on it. If you've installed python 2.7 and the application runs fine, open the "task manager" and verify that there's a "python.exe" process running on the guest system.
+
+Ok, now all it's ready to take the snapshot. Go to the "VirtualBox VM" menu > "Machine" > and click on "Take Snapshot...".
+
+VirtualBox will prompt you for a "Snapshot Name", at this moment, mine is "*vbox_ao*"; remember it or check it when needed in the snapshots section for this operating system in VirtualBox.
+
+Also, you will need to write, check, or remember the name of the virtual machine you are running, mine is "*windows xp sp3*"; you can read this value in the title of your running VM or in the main window of VirtualBox.
+
+At this moment, you should have :
+
+  # a "*windows xp sp3*" 
+  # with an snapshot called "*vbox_ao*"
+  # in "*saved*" state
+  # with the process "server.pyw" launched
+  # the sinjector files in "C:\temp"
+  # internet connectivity, IP address properly configured, etc. 
+
+Ready for submitting and analyzing malware samples :)
