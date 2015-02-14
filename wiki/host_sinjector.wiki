@@ -1,0 +1,63 @@
+#installing the sinjector client
+
+= Introduction =
+
+Here we will cover how to install the sinjector client in your host system,
+
+This client can be used by command line, and also their tools. At this moment, its basic operation is:
+
+  * "start" the virtualized "windows xp sp3" taken snapshot
+  * wait for connectivity with the server (server.pyw running inside the windows machine)
+  * upload the binary using the server application
+  * run the "C:\sinjector\sinjector.exe" and give as argument the uploaded binary
+  * wait for 1 minute (this can be changed in the client.py file)
+  * retrieve the log file (C:\newlog.text) , a list with the initial and final processes, and the deleted files
+  * "pause" the virtual machine
+
+The results will be placed in the "results" folder, inside another folder which name will be the MD5 hash function of the binary (ex: "results/053462..8954798/newlog.text")
+
+The tools located in the "scripts" folder of the "sinjector client" application are used to parse the results generated after analyzing the binaries in the windows virtual machine os.
+
+= Installation =
+
+First, get a copy of all the "sinjector client" files located [https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fsinjector_client here].
+
+Don't forget to create the folder "results" with write-enabled permissions for the user that runs the web server, since later will be required. Or simply add global write permissions with the following commands:
+
+{{{
+$ cd sinjector_client
+$ mkdir results
+$ chmod a+w results
+}}}
+
+Check that you can run python scripts, if not, install python 2.7 in your system, an try:
+
+{{{
+$ ./client.py 
+Usage: ./client.py <host> <sample> (ex: 192.168.56.101 fileToAnalyze.ex_)
+}}}
+
+As you can see, you could upload and analyze some binary if all it's properly configured, for example running:
+
+{{{
+$ ./client.py 192.168.56.201 samples/somebinaryyouhaveheretoanalyze.exe
+}}}
+
+  * Note: the IP address used were covered in [https://code.google.com/p/mandingo/wiki/virtual_config_ipconfig Virtual guest operating system configuration] section
+
+If all it's working fine, the client application should "start" the virtual box machine, upload the sample, and store the results in the "results" folder.
+
+*An important stage* here is to configure some basic parameters in the client.py script, so use your favorite editor an update the following lines if needed:
+
+|| *variable=value* || *Description* ||
+||VMACHINE="windows xp sp3"||This is the name of your virtual machine ||
+||SNAPSHOT="vbox_ao"||This is the name of the working snapshot||
+||HOSTONLY_IFACE="vboxnet0"||This is the name of the host only virtual box interface||
+||TCPDUMP="/usr/sbin/tcpdump"||This is the full path where you can find "tcpdump" in your system||
+||SINJECTOR="C:\\sInjector\\sinjector.exe"||This is the path where the sinjector binary is installed in the guest system||
+||SECONDS=60||This is the time that the binary sample will be analyzed||
+
+  * Note 1: VMACHINE and SNAPSHOT where covered and commented in [https://code.google.com/p/mandingo/wiki/guest_snapshot Creating a working snapshot of the guest system] section
+  * Note 2: HOSTONLY_IFACE was covered and commented in [https://code.google.com/p/mandingo/wiki/virtual_config_hostonly Setting up the host-only interface] section
+  * Note 3: you need to add suid and execute permissions to "tcpdump" for the user that calls the "client.py" script, also from the web interface; or run: sudo chmod a+s /usr/sbin/tcpdump
+  * Note 4: the SINJECTOR installation and path where covered in [https://code.google.com/p/mandingo/wiki/sinjector_guest_install Sinjector guest installation] section
