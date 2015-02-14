@@ -34,4 +34,6 @@ Enable IP forwarding with:
 sudo sysctl -w net.inet.ip.forwarding=1
 }}}
 
-That's it. If you go to your guest os (virtual windows xp) you should have internet connectivity. Try for example open a "cmd.exe" and "ping google.com", or browse some web page.
+That's it. If you go to your guest os (windows xp virtual machine) you should have internet connectivity. 
+
+Open a "cmd.exe" console and try "ping google.com" (or browse some web page) to check it.
