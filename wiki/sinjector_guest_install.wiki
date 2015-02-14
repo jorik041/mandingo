@@ -1,0 +1,57 @@
+#steps required to install sinjector in the guest os
+
+= Introduction =
+
+The sinjector.exe and dlltoinject.dll files are required to patch the malware processes and monitor their API activity. 
+
+The technique used is commonly called "inline injection". 
+
+The DLL (dlltoinject.dll) is loaded in the main process (for example in malware.exe), and is responsible of writing a "log" of each monitored windows API call. 
+
+Also, if a new process is created from this main process (ex. using CreateProcess) the DLL will be injected, so we can monitor each process called by the malicious application.
+
+= Details =
+
+To install sinjector application in the guest operating system (virtualized windows xp sp3) you will need:
+
+  * Compile the sinjector.exe binary from the [https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fsinjector_exe sinjector C sources] or get the [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_exe/sinjector.exe compiled file]
+  * Compile the dlltoinject.dll library from the [https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fdlltoinject dlltoinject C sources] or get the [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/dlltoinject/dlltoinject.dll compiled library]
+  * Create the "*C:\sinjector*" folder in the guest operating system.
+  * Create the "*C:\sinjector\injector.ini*" file with the following contents:
+{{{
+dll=dlltoinject.dll
+monitor=C:\Documents and Settings\user\Desktop\watchdocs\
+backup=c:\temp\
+logfile=c:\newlog.text
+debuglevel=0
+reinject=1
+reinject_blacklist=injector.exe|POIDE.exe|ctfmon.exe|pythonw.exe
+}}}
+    * Note 1: The "monitor" variable is a feature used to monitor "file writings" in some folder; not required for analyzing all malware, but present at this moment.
+    * Note 2: The "backup" is a directory where the deleted files will be saved. You will need to create this folder if it doesn't exists and you wan't to recover those deleted files.
+    * Note 3: do not change the "logfile" variable. If you do that, you will need to change some scripts that request this file (ex. client.py from sinjector_client)
+    * Note 4: if you don't want to monitor a specific process by its name, add it to "reinject_blacklist" with the following format: |name.exe
+  * Copy the python server application "*server.pyw*" to "C:\sinjector". You can find this script in the sinjector_client sources or [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_client/server.py here]
+    * Note 1: you will need to install python 2.7 to run the server.py application in the windows machine
+    * Note 2: rename the file from "server.py" to "server.pyw" if you want to hide the python console.
+  * Copy the files "*sinjector.exe*" and "*dlltoinject.dll*" to "C:\sinjector" folder.
+ When all the applications will be copied to "C:\sinjector" folder, a "dir c:\sinjector" command should output something like this:
+
+{{{
+C:\sinjector>cd ..
+
+C:\>dir c:\sinjector
+ Volume in drive C has no label.
+ Volume Serial Number is 84E9-BF87
+
+ Directory of c:\sinjector
+
+12/27/2014  08:05 PM    <DIR>          .
+12/27/2014  08:05 PM    <DIR>          ..
+01/15/2015  01:44 PM            53,760 sinjector.exe
+02/02/2015  12:03 PM            78,336 dlltoinject.dll
+12/28/2014  11:07 PM             1,653 server.pyw
+02/02/2015  12:11 PM               238 injector.ini
+               4 File(s)        133,987 bytes
+               2 Dir(s)   1,838,514,176 bytes free
+}}}
