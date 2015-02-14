@@ -55,3 +55,52 @@ C:\>dir c:\sinjector
                4 File(s)        133,987 bytes
                2 Dir(s)   1,838,514,176 bytes free
 }}}
+
+= Running sinjector.exe =
+
+This step is optional, but if you want, you can run sinjector.exe as a stand-alone application an see how it works.
+
+If you want to see the help, simply run "sinjector.exe" without arguments:
+
+== sinjector.exe help ==
+
+{{{
+C:\sinjector>sinjector.exe
+Simple DLL Injector v1.01 by mandingo - Dic, 2014
+Usage         : injector <options>
+Options       : /l       List processes
+                /p <pid> Hook process with PID <pid> (/P if suspended)
+                /x <cmd> Exec cmd (full path req.) and hook it
+                /X <cmd> Exec cmd, hook it and wait for keypress
+Configuration : C:\sinjector\injector.ini
+ > settings   : dll=, monitor=, logfile=, iatfile=, debuglevel=
+                backup=, reinject=, reinject_blacklist=
+DLL Injected  : C:\sinjector\dlltoinject.dll
+}}}
+
+Now, let's run sinjector.exe with some program, for example "notepad.exe" and see what is the result:
+
+{{{
+C:\sinjector>sinjector.exe /x c:\windows\system32\notepad.exe
+Simple DLL Injector v1.01 by mandingo - Dic, 2014
+[Info] Launching process: c:\windows\system32\notepad.exe
+[info] New pid: 11840
+[info] CreateRemoteThread Injection
+[info] The remote thread was successfully created
+}}}
+
+The "notepad" application should be shown. Now you can close it, or open some files... close the application, and see what has been logged opening the file "c:\newlog.text"
+
+{{{
+C:\sinjector>type c:\newlog.text
+[11464 ] [injector] EXECUTING "c:\windows\system32\notepad.exe" HOOKING PID 11840
+[11840 ] [GetModuleHandleA] handle=2088763392 "kernel32.dll"
+...
+[11840 ] [GetProcAddress] handle=2088763392 "LoadLibraryW"
+[11840 ] [GetModuleHandleA] handle=16777216 "(null)"
+[11840 ] [GetProcAddress] handle=0 "RegisterPenApp"
+[11840 ] [RegCreateKeyExW] handle=0xc0 MAXIMUM_ALLOWED "HKCU\Software\Microsoft\Notepad"
+[11840 ] [RegCreateKeyW] handle=0xc0 0x0 "HKCU\Software\Microsoft\Notepad"
+[11840 ] [RegQueryValueExW] REG_DWORD REG_DWORD_LITTLE_ENDIAN "handle(0xc0)\lfEscapement" "0"
+...
+}}}
