@@ -2,7 +2,7 @@
 
 = Introduction =
 
-On this page I will teach you what is this application and what you should do to install it properly in your system for analyzing malware samples.
+On this page I will tell you the steps required to properly install in your system the "Mandingo's Sandbox" for analyzing malware samples.
 
 
 = Details =
