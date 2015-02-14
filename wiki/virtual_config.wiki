@@ -9,4 +9,4 @@ The malware samples will be run in a virtual operating system. We need to prepar
 
 We will cover here the following steps:
 
-  * [virtual_config_hostonly setting up the host-only interface]
+  * [virtual_config_hostonly setting up the host-only interface] (vboxnet0 / 192.168.56.1)
