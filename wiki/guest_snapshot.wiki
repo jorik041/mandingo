@@ -17,7 +17,7 @@ A woking snapshot requires:
       * dlltoinject.dll
       * injector.ini
       * server.pyw
-    * All this steps were covered in the section [virtual_config Virtual guest operating system configuration] and *should be done only one time*
+    * All this steps were covered in the section [virtual_config Virtual guest operating system configuration]
 
 If the previous requirement was completed, you are almost ready to take the snapshot.
 
