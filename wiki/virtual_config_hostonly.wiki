@@ -1,0 +1,15 @@
+#configuring the host only interface
+
+= Introduction =
+
+In this page I will tell you how to add a host only interface in VirtualBox with the configuration I used to put all the system working.
+
+Requeriments: I assume that you have previously installed "windows xp sp3" operating system.
+
+= Details =
+
+  * Open VirtualBox
+  * Go to "Preferences" > "Network" > "Host only network" > "Add" (my new assigned network name "*vboxnet0*")
+    * IP: 192.168.56.1
+    * Netmask: 255.255.255.0
+    * DHCP server enabled
