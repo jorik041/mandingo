@@ -4,7 +4,9 @@
 
 Here we will cover how to install the sinjector client in your host system,
 
-This client can be used from the command line, and also their tools. At this moment, its basic operation is:
+The client can be used from the command line and also their tools. 
+
+At this moment, its basic operation is:
 
   * "start" the virtualized "windows xp sp3" taken snapshot
   * wait for connectivity with the server (server.pyw running inside the windows machine)
@@ -14,9 +16,9 @@ This client can be used from the command line, and also their tools. At this mom
   * retrieve the log file (C:\newlog.text) , a list with the initial and final processes, and the deleted files
   * "pause" the virtual machine
 
-The results will be placed in the "results" folder, inside another folder which name will be the MD5 hash function of the binary (ex: "results/053462..8954798/newlog.text")
+The results will be placed in the "results" folder. Inside this folder another folder will be created whose name will be the MD5 hash function of the binary (ex: "results/053462..8954798/newlog.text")
 
-The tools located in the "scripts" folder of the "sinjector client" application are used to parse the results generated after analyzing the binaries in the windows virtual machine os.
+The tools located in the "scripts" folder of the "sinjector client" application are used to parse the results that will be generated after analyzing the binaries.
 
 = Installation =
 
@@ -37,7 +39,7 @@ $ ./client.py
 Usage: ./client.py <host> <sample> (ex: 192.168.56.101 fileToAnalyze.ex_)
 }}}
 
-As you can see, you could upload and analyze some binary if all it's properly configured, for example running:
+As you can see, the application allows to analyze binary files if all it's properly configured. Try for example running:
 
 {{{
 $ ./client.py 192.168.56.201 samples/somebinaryyouhaveheretoanalyze.exe
@@ -47,7 +49,7 @@ $ ./client.py 192.168.56.201 samples/somebinaryyouhaveheretoanalyze.exe
 
 If all it's working fine, the client application should "start" the virtual box machine, upload the sample, and store the results in the "results" folder.
 
-*An important stage* here is to configure some basic parameters in the client.py script, so use your favorite editor an update the following lines if needed:
+*An important step* here is to configure some basic parameters in the "client.py" script, so use your favorite editor an update the following lines if needed:
 
 || *variable=value* || *Description* ||
 ||VMACHINE="windows xp sp3"||This is the name of your virtual machine ||
@@ -71,6 +73,7 @@ sudo easy_install pip
 }}}
 
 Then, execute the following commands to install the required libraries:
+
 {{{
 sudo pip install yara
 sudo pip install pefile
@@ -83,5 +86,5 @@ sudo pip install dpkt
 Install "monodevelop" and "radare2" in your system.
 
   * "Monodevelop" can be easily downloaded and installed from the package located in the http://www.monodevelop.com web page.
-  * You can find "radare2" in github
+  * You can find "radare2" in github https://github.com/radare/radare2
  
