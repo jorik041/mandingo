@@ -44,4 +44,4 @@ At this moment, you should have :
   # the sinjector files in "C:\temp"
   # IP address properly configured, internet connectivity, etc. 
 
-Ready for submitting and analyzing malware samples :)
+Almost ready for submitting and analyzing malware samples with the Mandingo's Sandbox :)
