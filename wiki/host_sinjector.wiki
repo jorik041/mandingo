@@ -4,7 +4,7 @@
 
 Here we will cover how to install the sinjector client in your host system,
 
-This client can be used by command line, and also their tools. At this moment, its basic operation is:
+This client can be used from the command line, and also their tools. At this moment, its basic operation is:
 
   * "start" the virtualized "windows xp sp3" taken snapshot
   * wait for connectivity with the server (server.pyw running inside the windows machine)
