@@ -1,0 +1,12 @@
+#Steps required for the virtual guest operating system
+
+= Introduction =
+
+The malware samples will be run in a virtual operating system. We need to prepare it before analyzing them.
+
+
+= Details =
+
+We will cover here the following steps:
+
+  * [virtual_config_hostonly setting up the host-only interface]
