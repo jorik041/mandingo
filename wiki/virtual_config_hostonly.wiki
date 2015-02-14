@@ -12,4 +12,3 @@ Requeriments: I assume that you have previously installed "windows xp sp3" opera
   * Go to "Preferences" > "Network" > "Host only network" > "Add" (my new assigned network name "*vboxnet0*")
     * IP: 192.168.56.1
     * Netmask: 255.255.255.0
-    * DHCP server enabled
