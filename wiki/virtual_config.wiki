@@ -18,3 +18,4 @@ We will cover here the following steps:
   # [virtual_config_ipconfig setting the host IP address] (192.168.56.201)
   # [ip_forwarding_config enabling internet connectivity in the guest os]
   # [sinjector_guest_install sinjector guest installation]
+  # [guest_snapshot taking a working snapshot]
