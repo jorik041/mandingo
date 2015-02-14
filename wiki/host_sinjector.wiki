@@ -61,3 +61,27 @@ If all it's working fine, the client application should "start" the virtual box 
   * Note 2: HOSTONLY_IFACE was covered and commented in [https://code.google.com/p/mandingo/wiki/virtual_config_hostonly Setting up the host-only interface] section
   * Note 3: you need to add suid and execute permissions to "tcpdump" for the user that calls the "client.py" script, also from the web interface; or run: sudo chmod a+s /usr/sbin/tcpdump
   * Note 4: the SINJECTOR installation and path where covered in [https://code.google.com/p/mandingo/wiki/sinjector_guest_install Sinjector guest installation] section
+
+= Libraries =
+
+First, install "pip" if required with:
+
+{{{
+sudo easy_install pip
+}}}
+
+Then, execute the following commands to install the required libraries:
+{{{
+sudo pip install yara
+sudo pip install pefile
+sudo pip install dpkt
+
+}}}
+
+= 3rd party applications =
+
+Install "monodevelop" and "radare2" in your system.
+
+  * "Monodevelop" can be easily downloading the installer package from their web page.
+  * You can find "radare2" in github
+ 
