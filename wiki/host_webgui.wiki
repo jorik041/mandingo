@@ -31,4 +31,4 @@ Simply, download them and put it all inside the root folder that you have chosen
 
 Refresh the URL http://127.0.0.1/ and that's it, you should see now the web interface for the Mandingo's Sandbox :)
 
- 
+https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_home.png
