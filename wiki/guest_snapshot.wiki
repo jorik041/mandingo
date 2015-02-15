@@ -1,4 +1,4 @@
-#steps to prepare a working windows snapshot
+#required steps to prepare a working windows snapshot
 
 = Introduction =
 
@@ -9,10 +9,10 @@ In this section I will tell you how to configure a working snapshot for analyzin
 
 A woking snapshot requires:
 
-  * That you have already have a windows xp3 virtual box imagen running with:
-    * Networking enabled
-    * Internet connectivity
-    * The sinjector required files copied at "C:\sinjector":
+  * That you have installed a "windows xp sp3" virtual box imagen running with:
+    * Networking enabled (host-only)
+    * Internet connectivity (using the host-only interface)
+    * All the "sinjector" required files copied in the folder "C:\sinjector":
       * sinjector.exe
       * dlltoinject.dll
       * injector.ini
@@ -27,7 +27,9 @@ Now, you should launch the python server application called "*server.pyw*" locat
 
 == Taking the snapshot ==
 
-Ok, now all it's ready to take the snapshot. Go to the "VirtualBox VM" menu > "Machine" > and click on "Take Snapshot...".
+Ok, now all it's ready to take the snapshot. Go to:
+
+"VirtualBox VM" menu > "Machine" > and click on "Take Snapshot...".
 
 VirtualBox will prompt you for a "Snapshot Name", at this moment, mine is "*vbox_ao*"; remember it or check it when needed in the snapshots section for this operating system in VirtualBox.
 
