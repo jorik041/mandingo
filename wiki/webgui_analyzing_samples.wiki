@@ -38,7 +38,7 @@ https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webg
 
 All the results are stored inside the folder "results"; this was commented in the section: [ ]
 
-If we access to the "sinjector client" folder using a console we can see them:
+If we access to the "sinjector client" folder using a console we can see that some files have been created after the analysis of the sample "9d8c4d9d189d5220d10223b2089efa60" (binary MD5 hash):
 
 {{{
 $ ls -l results/9d8c4d9d189d5220d10223b2089efa60/
@@ -52,7 +52,7 @@ total 2952
 -rw-------  1 seagate  staff  514062 15 feb 11:25 screenshot-59secs.png
 }}}
 
-In the output above we see the files generated after the analysis of the sample with hash "9d8c4d9d189d5220d10223b2089efa60":
+What is each file?
 
   * A network pcap (probably empty... no communications)
   * The output of the "sinjector.exe" application (newlog.text) / monitored API calls
