@@ -35,6 +35,7 @@
   * *Sections*: 
     * Name, entry, pointer to raw data, size of raw data, relative percentage, virtual address, flags, entropy, section dumping (raw), etc. 
     * Notifications when a section size or offset is invalid or too big.
+    * Notifications when the entropy is too high or too low.
   * *Resources*: 
     * Type, graphical display of bitmaps and icons, virtual address, offset to data, size, file offset, language identification, creation date, percentage, resource dumping (raw), etc. 
     * Notifications when a resource size is invalid or too big.
