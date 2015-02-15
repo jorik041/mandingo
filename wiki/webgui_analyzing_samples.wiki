@@ -86,6 +86,6 @@ To enable "promiscuous" mode:
 
 === Other errors ===
 
-You may get other errors during the analysis, so I'll try to cover them here. 
+You may get other errors during the analysis, so I'll try to cover them when I have free time here. 
 
 Anyway, if you need some "fast support" don't hesitate to contact me :)
