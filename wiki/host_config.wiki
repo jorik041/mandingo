@@ -21,3 +21,5 @@ Ok, let's begin with the installation of all the required files in the host:
 
   * [host_sinjector Installing the "sinjector_client"]
   * [host_webgui Installing the Web GUI under MAMP]
+
+You continue here: [webgui_uploading_samples Uploading samples from the Web GUI]
