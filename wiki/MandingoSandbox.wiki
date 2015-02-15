@@ -6,8 +6,12 @@
 On this page I will tell you the steps required to properly install in your system the "Mandingo's Sandbox" for analyzing malware samples.
 
 
-= Steps =
+= Preparation =
 
   # [virtual_config Virtual guest operating system configuration]
   # [guest_snapshot Creating a working snapshot of the guest system]
-  # [host_config Install the host applications and configure it]
+  # [host_config Install the host applications and configuring it]
+
+= Usage =
+
+  # [webgui_uploading_samples Uploading samples from the Web GUI]
