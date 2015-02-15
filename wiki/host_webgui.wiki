@@ -59,6 +59,24 @@ And make some changes if needed:
 
 = Checking the web interface =
 
+Now, we are going to check that the "samples" section it's working fine.
+
+When we click on "samples", we should get the list of samples analyzed (0 at the beginning), and don't get any errors.
+
+If for example, you get the following error:
+
+{{{
+ERROR - "/Users/mandingo/python/sinjector_client/results" not found...
+#	 Sample	 Type	 Art	 Analysis	 Status
+}}}
+
+That means that you haven't edited properly the "modules/config.php" file, since it's pointing to a path that doesn't exists. If you find this error, please, change the following line pointing to a path where the sinjector client is installed:
+
+{{{
+    public static $sinjector_path="/Users/mandingo/python/sinjector_client";
+}}}
+
+
 If all it's ok, you should now be ready to analyze malware samples using the web gui.
 
 You continue here: [webgui_uploading_samples Uploading samples from the Web GUI]
