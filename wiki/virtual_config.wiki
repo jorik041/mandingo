@@ -15,6 +15,6 @@ In this pages I will show you the configuration values I choose for this laborat
 We will cover here the following steps:
 
   # [virtual_config_hostonly Setting up the host-only interface] (vboxnet0 / 192.168.56.1)
-  # [virtual_config_ipconfig Setting the host IP address] (192.168.56.201)
+  # [virtual_config_ipconfig Setting the guest IP address] (192.168.56.201)
   # [ip_forwarding_config Enabling internet connectivity in the guest os]
   # [sinjector_guest_install Sinjector guest installation]
