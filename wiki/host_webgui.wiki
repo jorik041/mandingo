@@ -1,4 +1,4 @@
-#steps required to install the Web GUI under MAMP
+#required steps to install the Web GUI under MAMP
 
 = Introduction =
 
