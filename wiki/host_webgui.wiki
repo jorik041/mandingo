@@ -8,7 +8,7 @@ The requirements are minimal, since no database engines are needed at this momen
 
 = Web server installation =
 
-Before installing the web application, we need to install or configure a web server that supports PHP.
+Before running the web gui, we need to install or configure a web server that supports PHP.
 
 I've chosen MAMP for macosx, you can find it here: http://www.mamp.info/en/
 
