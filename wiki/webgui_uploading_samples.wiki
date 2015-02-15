@@ -7,7 +7,7 @@ In this section were going to download a malware sample (you can choose other yo
 
 = Some sources for Malware samples =
 
-There're lot of places in Internet for downloading malware samples. By the moment, as demonstration purposes, we are going to fetch one from zeus tracker.
+There're lot of places in Internet for downloading malware samples. By the moment and for demonstration purposes, I'm going to fetch a "zbot" from zeus tracker.
 
 Open your browser and grab one binary from here: https://zeustracker.abuse.ch/monitor.php?browse=binaries
 
