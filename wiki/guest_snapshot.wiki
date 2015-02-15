@@ -21,6 +21,14 @@ A woking snapshot requires:
 
 If the previous requirement was completed, you are almost ready to take the snapshot.
 
+= Preparing the guest for malware analysis =
+
+For getting precise results about the malware behavior it's important that, before taking the snapshot, you disable any program that may interfere in the analysis in the guest system like:
+
+  * Antivirus and firewalls
+  * Not important services and applications
+  * Scheduled tasks, etc.
+
 == Launching the python server script inside the guest ==
 
 Now, you should launch the python server application called "*server.pyw*" located at "C:\sinjector", double clicking on it. If you've installed python 2.7 and the application runs fine, open the "task manager" and verify that there's a "python.exe" process running on the guest system.
