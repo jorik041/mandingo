@@ -4,7 +4,7 @@
 
 After uploading a sample from the web gui we are ready to analyze it (if all it's working ok).
 
-https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_sample_uploaded.png
+https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/webgui/webgui_sample_uploaded.png
 
 Basically, you only have to click in the "Analyze" link after submitting the sample.
 
@@ -32,7 +32,7 @@ Sample uploaded: C:\sinjector/binary4
 
 If all it's ok, you should see an output like this:
 
-https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_log.png
+https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/webgui/webgui_log.png
 
 == Viewing the results from the console ==
 
