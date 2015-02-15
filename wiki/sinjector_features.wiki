@@ -36,7 +36,7 @@
   * *Strings*: unicode strings, ascii strings
   * *Graph*: see the binary graphically. Very useful to identify compressed or encrypted parts, paddings, etc. Hexadecimal and ASCII dumping of the data, section starting markers, etc.
 
-== Dynamic analysis ==
+=== Dynamic analysis ===
 
   * Processes: PID, action (created, opened, written, alive...), status (new, running), process name. API log filtering by process ID.
   * Libraries: libraries and methods loaded at "run time"
@@ -44,3 +44,28 @@
   * File operations: files created and deleted
   * Networking: navigate by the .pcap graphically
   * Desktop screenshots
+
+=== Tools ===
+
+==== miscelaneous ====
+
+  * pefile dump_info()
+
+==== monodevelop ====
+
+  * 
+
+==== radare2 ====
+
+  * information extraction:
+    * binary info
+    * entry point
+    * imports
+    * linked libraries
+    * relocations
+    * symbols
+    * sections
+    * strings in data section
+    * raw strings
+  * interactive function listing and disassemble
+  * hashing
