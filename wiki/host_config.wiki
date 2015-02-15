@@ -1,13 +1,16 @@
-#steps required to install an configure the host applications
+#required steps to install an configure the host applications
 
 = Introduction =
 
 From this moment, I assume that you have a working windows xp sp3 virtual box snapshot ready to use, with the sinjector files installed, the server.pyw running, with the network configured, internet connectivity, and in "saved" state.
 
-Now, we will need to install the sinjector client files in the host. They are a serie of scripts that should be copied in the system (mine is macosx) which will be used to:
+Now, we will need to install the sinjector client files and the web gui in the host. 
+
+They are a serie of scripts that should be copied in the system (mine is macosx) which will be used to:
 
   * "start" and "stop" the virtual guest system (windows)
   * upload the malware samples you'd like to analyze
+  * capture the network traffic
   * provide a web interface for ease of use.
   * etc
 
