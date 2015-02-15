@@ -3,7 +3,7 @@
 
 = Introduction =
 
-On this page I will tell you the steps required to properly install in your system the "Mandingo's Sandbox" for analyzing malware samples.
+On this page I will tell you the steps required to properly install and run in your system the "Mandingo's Sandbox" for analyzing malware samples.
 
 
 = Preparation =
