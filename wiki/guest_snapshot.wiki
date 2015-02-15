@@ -23,7 +23,7 @@ If the previous requirement was completed, you are almost ready to take the snap
 
 == Preparing the guest for malware analysis ==
 
-For getting precise results about the malware behavior it's important that, before taking the snapshot, you disable any program that may interfere in the analysis in the guest system like:
+For getting precise results about the malware behavior, it's important that, before taking the snapshot, you disable any program that may interfere the analysis in this guest system like:
 
   * Antivirus and firewalls
   * Not important services and applications
