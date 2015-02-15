@@ -73,3 +73,55 @@
     * binary info, entry point, imports, linked libraries, relocations, symbols, sections, strings in data section and raw strings
   * Interactive function listing and disassemble
   * Hashing
+
+== Current list of API calls traced ==
+
+  # CopyFileExA
+  # CopyFileExW
+  # CopyFileA
+  # CopyFileW
+  # CreateFileA
+  # CreateFileW
+  # DeleteFileW
+  # DeleteFileA
+  # MoveFileExA
+  # MoveFileExW
+  # MoveFileA
+  # MoveFileW
+  # Sleep
+  # RegCreateKeyExA
+  # RegCreateKeyExW
+  # RegCreateKeyA
+  # RegCreateKeyW
+  # RegOpenKeyExW
+  # RegOpenKeyExA
+  # RegOpenKeyW
+  # RegOpenKeyA
+  # RegQueryValueExA
+  # RegQueryValueExW
+  # RegSetValueExA
+  # RegSetValueExW
+  # RegConnectRegistryA
+  # RegConnectRegistryW
+  # connect
+  # getaddrinfo
+  # GetAddrInfoW
+  # InternetConnectA
+  # InternetConnectW
+  # HttpOpenRequestA
+  # HttpOpenRequestW
+  # OpenProcess
+  # CreateProcessA
+  # CreateProcessW
+  # ResumeThread
+  # WriteProcessMemory
+  # CreateRemoteThread
+  # CreateProcessInternalA
+  # CreateProcessAsUserA
+  # CreateProcessAsUserW
+  # GetModuleHandleA
+  # GetModuleHandleW
+  # GetProcAddress
+  # LoadLibraryA
+  # LoadLibraryW
+}}}
