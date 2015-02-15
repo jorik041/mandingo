@@ -33,3 +33,5 @@ Finally, you need to enable "promiscuous" mode so we can use "tcpdump" later for
 
   # Click on "Advanced"
   # And in "promiscuous" mode select "Allow All"
+
+You can continue here: [virtual_config_ipconfig Setting the guest IP address]
