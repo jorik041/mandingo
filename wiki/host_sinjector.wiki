@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Here we will cover how to install the sinjector client in your host system,
+Here we will cover how to install the sinjector client in your host system.
 
 The client can be used from the command line and also their tools. 
 
@@ -13,7 +13,7 @@ At this moment, its basic operation is:
   * upload the binary using the server application
   * run the "C:\sinjector\sinjector.exe" and give as argument the uploaded binary
   * wait for 1 minute (this can be changed in the client.py file)
-  * retrieve the log file (C:\newlog.text) , a list with the initial and final processes, and the deleted files
+  * retrieve the log file (C:\newlog.text) , a list with the initial and final processes, and the created/deleted files
   * "pause" the virtual machine
 
 The results will be placed in the "results" folder. Inside this folder another folder will be created whose name will be the MD5 hash function of the binary (ex: "results/053462..8954798/newlog.text")
