@@ -25,3 +25,12 @@
   * Very few 3rd party libraries required
 
 == Web GUI features ===
+
+=== Static analysis ===
+
+  * Details: MD5, file size, file type (magic), internal compilation date, packer identification, compiler identification, version information
+  * Sections: name, entry, pointer to raw data, size of raw data, relative percentage, virtual address, flags, entropy, section dumping (raw), etc.
+  * Resources: type, graphical display of bitmaps and icons, virtual address, offset to data, size, file offset, language identification, creation date, percentage, resource dumping (raw), etc.
+  * Imports: function names, addresses, libraries, links to online documentation
+  * Strings: unicode strings, ascii strings
+  * Graph: see the binary graphically. Very useful to identify compressed or encrypted parts, paddings, etc. Hexadecimal and ASCII dumping of the data, section starting markers, etc.
