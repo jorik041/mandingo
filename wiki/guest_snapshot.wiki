@@ -45,3 +45,5 @@ At this moment, you should have :
   # IP address properly configured, internet connectivity, etc. 
 
 Almost ready for submitting and analyzing malware samples with the Mandingo's Sandbox :)
+
+You can continue here: [host_config Install the host applications and configuring it]
