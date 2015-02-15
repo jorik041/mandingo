@@ -21,4 +21,4 @@ These are all the required files I can provide you to run the Mandingo Sandbox :
   * Web interface used to submit the malware samples to the virtual machine; ease of use of all the laboratory.
 
 ==More==
-Read the [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_client/CONFIG config] file supplied with the "sinjector_client" application and get some tips for the system setup.
+If you want, read the [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_client/CONFIG config] file supplied with the "sinjector_client" application and get some tips for the system setup... but in my opinion, it's preferable to read the documentation provided in the [https://code.google.com/p/mandingo/wiki/MandingoSandbox wiki page] :)
