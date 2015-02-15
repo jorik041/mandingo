@@ -16,7 +16,7 @@
   * Different Inline injection methods used:
     * "CreateRemoteThread" for handling normal processes
     * "QueueUserAPC" for handling suspended processes
-  * Injection of windows console applications
+  * Injection support for windows console applications
   * Sub-processes "reinjection": automatically DLL injection of new processes -or modified processes- called from the sample that is being analyzed 
   * Lot of API calls traced
     * File operations: creation, renaming, deleting, copying...
