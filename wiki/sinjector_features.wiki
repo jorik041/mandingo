@@ -61,7 +61,7 @@
 
 ==== radare2 ====
 
-  * information extraction:
+  * Information extraction:
     * binary info
     * entry point
     * imports
@@ -71,5 +71,5 @@
     * sections
     * strings in data section
     * raw strings
-  * interactive function listing and disassemble
-  * hashing
+  * Interactive function listing and disassemble
+  * Hashing
