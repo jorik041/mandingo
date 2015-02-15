@@ -28,6 +28,7 @@ To add this interface to the guest virtual machine (windows xp sp3), you will ne
 
 The name in my case is "vboxnet0" as before; yours may be different.
  
+
 Finally, you need to enable "promiscuous" mode so we can use "tcpdump" later for generating a ".pcap" file of the network traffic. To do this:
 
   # Click on "Advanced"
