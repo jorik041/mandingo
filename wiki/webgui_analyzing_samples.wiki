@@ -83,3 +83,9 @@ To enable "promiscuous" mode:
   # Open the configuration
   # Go to Network > Adapter 1 > Advanced
   # And in "promiscuous" mode select "Allow All"
+
+=== Other errors ===
+
+You may get other errors during the analysis, so I'll try to cover them here. 
+
+Anyway, if you need some "fast support" don't hesitate to contact me :)
