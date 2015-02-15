@@ -29,8 +29,18 @@
 === Static analysis ===
 
   * *Details*: MD5, file size, file type (magic), internal compilation date, packer identification, compiler identification, version information
-  * *Section*s: name, entry, pointer to raw data, size of raw data, relative percentage, virtual address, flags, entropy, section dumping (raw), etc.
+  * *Sections*: name, entry, pointer to raw data, size of raw data, relative percentage, virtual address, flags, entropy, section dumping (raw), etc.
   * *Resources*: type, graphical display of bitmaps and icons, virtual address, offset to data, size, file offset, language identification, creation date, percentage, resource dumping (raw), etc.
+    * .Net resources are also identified
   * *Imports*: function names, addresses, libraries, links to online documentation
   * *Strings*: unicode strings, ascii strings
   * *Graph*: see the binary graphically. Very useful to identify compressed or encrypted parts, paddings, etc. Hexadecimal and ASCII dumping of the data, section starting markers, etc.
+
+== Dynamic analysis ==
+
+  * Processes: PID, action (created, opened, written, alive...), status (new, running), process name. API log filtering by process ID.
+  * Libraries: libraries and methods loaded at "run time"
+  * Registry operations: writing, opening, setting and querying. 
+  * File operations: files created and deleted
+  * Networking: navigate by the .pcap graphically
+  * Desktop screenshots
