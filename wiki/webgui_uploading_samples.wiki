@@ -16,3 +16,27 @@ It's interesting to download a malware sample (zbot) that it's online (red color
 I'm going to download the sample with MD5 hash "9d8c4d9d189d5220d10223b2089efa60" for this demonstration.
 
 Save the file locally (do not run it!), and open the web gui if ready; installation of the web gui was covered here: [https://code.google.com/p/mandingo/wiki/host_webgui Installing the Web GUI under MAMP]
+
+= Uploading the sample =
+
+Open the web gui with your favorite web browser pointing to http://127.0.0.1 if this is the location where it's running; this was covered in the section:
+
+You should see a page like this:
+
+https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_home.png
+
+Click on "choose file", locate the previously downloaded file -the "zbot" from zeustracker or any other sample you'd like to analyze-, and press the button "submit sample".
+
+If all it's ok, you should see a response page like this:
+
+https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_sample_uploaded.png
+
+Also, if you browse with a terminal console to your local files, you should see that the uploaded file is placed in the web gui "uploads" folder:
+
+{{{
+$ ls -l uploads/
+total 456
+-rw-r--r--  1 seagate  admin  232376 15 feb 10:18 9d8c4d9d189d5220d10223b2089efa60.bin
+}}}
+
+Now, you are ready to analyze the sample.
