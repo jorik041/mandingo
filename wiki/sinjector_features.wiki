@@ -12,7 +12,7 @@
   * Several tools available from the command line
   * No database support required -all is stored in local files-
   * Traffic packet capture (.pcap)
-  * Automatically fetch created (may be droped) and deleted files
+  * Automatically fetch created (may be dropped) and deleted files
   * Different Inline injection methods used:
     * "CreateRemoteThread" for handling normal processes
     * "QueueUserAPC" for handling suspended processes
