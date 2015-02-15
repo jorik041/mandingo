@@ -17,3 +17,5 @@ Start the guest os (windows xp sp3) and go to "control panel" > "networking" > "
 The default gateway will be used to allow connections between the guest os (windows) and Internet. This is interesting since we want to see how the malware connects to C&C, download files, etc.
 
 We will need to add some rules to the host os (macosx/linux) to forward this connections. This will be commented in the [ip_forwarding_config forwarding connections] page.
+
+You can continue here: [ip_forwarding_config Enabling internet connectivity in the guest os]
