@@ -58,7 +58,7 @@ C:\>dir c:\sinjector
 
 = Running sinjector.exe =
 
-This step is optional, but if you want, you can run sinjector.exe as a stand-alone application an see how it works.
+This step is optional, but if you want, you can run sinjector.exe as a stand-alone application and see -how it works-.
 
 If you want to see the help, simply run "sinjector.exe" without arguments:
 
