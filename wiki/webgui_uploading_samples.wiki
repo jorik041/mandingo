@@ -23,13 +23,13 @@ Open the web gui with your favorite web browser pointing to http://127.0.0.1 if 
 
 You should see a page like this:
 
-https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_home.png
+https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/webgui/webgui_home.png
 
 Click on "choose file", locate the previously downloaded file -the "zbot" from zeustracker or any other sample you'd like to analyze-, and press the button "submit sample".
 
 If all it's ok, you should see a response page like this:
 
-https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_sample_uploaded.png
+https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/webgui/webgui_sample_uploaded.png
 
 Also, if you browse with a terminal console to your local files, you should see that the uploaded file is placed in the web gui "uploads" folder:
 
