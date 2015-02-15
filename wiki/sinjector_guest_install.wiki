@@ -12,10 +12,10 @@ Also, if a new process is created from this main process (ex. using CreateProces
 
 = Details =
 
-To install sinjector application in the guest operating system (virtualized windows xp sp3) you will need:
+To install "sinjector" application in the guest operating system (virtualized windows xp sp3) you will need:
 
-  * Compile the sinjector.exe binary from the [https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fsinjector_exe sinjector C sources] or get the [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_exe/sinjector.exe compiled file]
-  * Compile the dlltoinject.dll library from the [https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fdlltoinject dlltoinject C sources] or get the [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/dlltoinject/dlltoinject.dll compiled library]
+  * To compile the "sinjector.exe" binary from the [https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fsinjector_exe sinjector C sources] or get the [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_exe/sinjector.exe compiled file]
+  * To compile the "dlltoinject.dll" library from the [https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fdlltoinject dlltoinject C sources] or get the [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/dlltoinject/dlltoinject.dll compiled library]
   * Create the "*C:\sinjector*" folder in the guest operating system.
   * Create the "*C:\sinjector\injector.ini*" file with the following contents:
 {{{
