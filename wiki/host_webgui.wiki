@@ -76,7 +76,7 @@ That means that you haven't edited properly the "modules/config.php" file, since
     public static $sinjector_path="/Users/mandingo/python/sinjector_client";
 }}}
 
-You can get this error if the "results" folder it's not found, so make sure that exists -and have write permissions-; this was covered in the section: [https://code.google.com/p/mandingo/wiki/host_sinjector Insstalling the "sinjector client"]
+You can get this error if the "results" folder it's not found, so make sure that exists -and have write permissions-; this was covered in the section: [https://code.google.com/p/mandingo/wiki/host_sinjector Installing the "sinjector client"]
 
 If all it's ok, you should now be ready to analyze malware samples using the web gui.
 
