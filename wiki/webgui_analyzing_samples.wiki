@@ -52,7 +52,7 @@ total 2952
 -rw-------  1 seagate  staff  514062 15 feb 11:25 screenshot-59secs.png
 }}}
 
-What is each file?
+What we are seeing as output?
 
   * A network pcap (probably empty... no communications)
   * The output of the "sinjector.exe" application (newlog.text) / monitored API calls
