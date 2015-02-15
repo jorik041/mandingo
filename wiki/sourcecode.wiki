@@ -11,7 +11,7 @@ These are all the required files I can provide you to run the Mandingo Sandbox :
 
 ====[https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fsinjector_client sinjector_client]====
   * This application should be copied at your host system (mine is macosx).
-  * It's function is stablish communications between the host operating system and the virtual machine (windows running with virtualbox).
+  * Its function is to stablish communications between the host operating system and the virtual machine (windows running with virtualbox).
   * Provides a serie of scripts used to parse the results of the executable samples analyzed
 
 ===[https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fwebgui webgui]===
