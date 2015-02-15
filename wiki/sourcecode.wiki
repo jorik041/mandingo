@@ -15,7 +15,7 @@ These are all the required files I can provide you to run the Mandingo Sandbox :
   * Provide a serie of scripts used to parse the results of the executable samples analyzed
 
 ===[https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fwebgui webgui]===
-  * Web interface used to submit the malware samples to the virtual machine, provide ease of use of all the laboratory, etc.
+  * Web interface used to submit the malware samples to the virtual machine; ease of use of all the laboratory.
 
 ===[https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fdlltoinject dlltoinject]===
   * DLL that will be injected in every process analyzed and each subprocess called.
