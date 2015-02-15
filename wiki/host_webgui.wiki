@@ -32,3 +32,27 @@ Simply, download them and put it all inside the root folder that you have chosen
 Refresh the URL http://127.0.0.1/ and that's it, you should see now the web interface for the Mandingo's Sandbox :)
 
 https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_home.png
+
+= Final configuration steps =
+
+Now, you have to edit the file "modules/config.php", that actually have the following information:
+
+{{{
+<?php
+class Config{
+    public static $python="/Library/Frameworks/Python.framework/Versions/2.7/bin/python";
+    public static $sinjector_path="/Users/mandingo/python/sinjector_client";
+    public static $radare2_path="/usr/local/bin";
+    public static $sinjector_client="client.py";
+    public static $sinjector_vm_addr="192.168.56.201";
+    public static $logfilename="newlog.text";
+}
+?>
+}}}
+
+And make some changes:
+
+  * Choose a valid python interpreter for the variable $python
+  * Choose the path where your sinjector client scripts are installed; this was covered in the [ ] section
+  * Choose the path where the binary "radare2" was installed; this was covered in the [ ] section
+  * Choose the IP address of the guest virtual system; this was covered in the [ ] section
