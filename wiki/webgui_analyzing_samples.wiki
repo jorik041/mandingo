@@ -34,6 +34,56 @@ If all it's ok, you should see an output like this:
 
 https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_log.png
 
+== Viewing the results from the console ==
+
+All the results are stored inside the folder "results"; this was commented in the section: [ ]
+
+If we access to the "sinjector client" folder using a console we can see them:
+
+{{{
+$ ls -l results/9d8c4d9d189d5220d10223b2089efa60/
+total 2952
+-rw-r--r--  1 seagate  staff      24 15 feb 11:25 network.pcap
+-rw-r--r--  1 seagate  staff   14513 15 feb 11:25 newlog.text
+-rw-r--r--  1 seagate  staff     745 15 feb 11:24 processes.txt
+-rw-r--r--  1 seagate  staff     782 15 feb 11:25 processes_final.txt
+-rw-------  1 seagate  staff  450266 15 feb 11:24 screenshot-1secs.png
+-rw-------  1 seagate  staff  514062 15 feb 11:25 screenshot-40secs.png
+-rw-------  1 seagate  staff  514062 15 feb 11:25 screenshot-59secs.png
+}}}
+
+In the output above we see the files generated after the analysis of the sample with hash "9d8c4d9d189d5220d10223b2089efa60":
+
+  * A network pcap (probably empty... no communications)
+  * The output of the "sinjector.exe" application (newlog.text) / monitored API calls
+  * A list with the processes running before uploading the sample (processes.txt)
+  * A list with the final processes (processes_final.txt)
+  * And three screenshots.
+
+If you want, you can use the scripts located inside the "scripts" folder against those results. Example:
+
+{{{
+$ ./scripts/affected_processes.py results/9d8c4d9d189d5220d10223b2089efa60/newlog.text 
+1604   alive        new C:\sinjector/binary4
+1604   created      new C:\sinjector/binary4
+}}}
+
+{{{
+$ ./scripts/loaded_libraries.py results/9d8c4d9d189d5220d10223b2089efa60/newlog.text 
+handle=1983447040 "C:\WINDOWS\SYSTEM32\IMM32.DLL"
+handle=1968963584 "C:\WINDOWS\SYSTEM32\MSCTFIME.IME"
+handle=2089811968 "C:\WINDOWS\SYSTEM32\NTDLL.DLL"
+handle=2088763392 "KERNEL32"
+handle=1933705216 "MSVBVM60"
+handle=2001600512 "OLE32.DLL"
+handle=1997668352 "OLEAUT32.DLL"
+handle=2121400320 "SXS.DLL"
+handle=2118189056 "USER32"
+handle=1524039680 "UXTHEME.DLL"
+handle=0 "VERSION.DLL"
+handle=2009071616 "VERSION.DLL"
+}}}
+
 == Some errors ==
 === When python is not located ===
 
