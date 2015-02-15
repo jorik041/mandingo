@@ -50,7 +50,7 @@
   * *Registry* operations: 
     * Writing, opening, setting and querying. 
     * Important events highlighting
-  * *File* operations: files created and deleted
+  * *File operations*: files created and deleted
   * *Networking*: navigate by the .pcap graphically
   * Desktop *screenshots*
 
