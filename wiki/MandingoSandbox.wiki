@@ -5,6 +5,7 @@
 
 On this page I will tell you the steps required to properly install and run in your system the "Mandingo's Sandbox" for analyzing malware samples.
 
+You can see a list of the current features [sinjector_features here]
 
 = Preparation =
 
