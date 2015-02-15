@@ -38,7 +38,7 @@ https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webg
 
 All the results are stored inside the folder "results"; this was commented in the section: [ ]
 
-If we access to the "sinjector client" folder using a console we can see that some files have been created after the analysis of the sample "9d8c4d9d189d5220d10223b2089efa60" (binary MD5 hash):
+If we access to the "sinjector client" folder using a console we can see that some files that have been created after the analysis of the sample "9d8c4d9d189d5220d10223b2089efa60" (binary MD5 hash):
 
 {{{
 $ ls -l results/9d8c4d9d189d5220d10223b2089efa60/
