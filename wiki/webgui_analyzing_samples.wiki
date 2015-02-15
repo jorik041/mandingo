@@ -30,6 +30,10 @@ Sample uploaded: C:\sinjector/binary4
   * A initial screenshot should be taken.
   * And you should see the rest of the output of the "sinjector.exe" client -> the API monitored for the sample (malware) you have submitted.
 
+If all it's ok, you should see an output like this:
+
+https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webgui_log.png
+
 == Some errors ==
 === When python is not located ===
 
