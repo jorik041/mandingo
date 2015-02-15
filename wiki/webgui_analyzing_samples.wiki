@@ -54,11 +54,11 @@ total 2952
 
 What we are seeing as output?
 
-  * A network pcap (probably empty... no communications)
-  * The output of the "sinjector.exe" application (newlog.text) / monitored API calls
-  * A list with the processes running before uploading the sample (processes.txt)
-  * A list with the final processes (processes_final.txt)
-  * And three screenshots.
+  * A network pcap file (probably empty / no communications)
+  * A file with the output of the "sinjector.exe" application (newlog.text) / monitored API calls
+  * A file which contains the processes running before uploading the sample (processes.txt)
+  * A file whith contains the final processes (processes_final.txt)
+  * And three screenshots (taken at seconds 1, 40, and 59); this can be changed editing the script "client.py"
 
 If you want, you can use the scripts located inside the "scripts" folder against those results. Example:
 
