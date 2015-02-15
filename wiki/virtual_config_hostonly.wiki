@@ -20,7 +20,7 @@ After adding the host only network to VirtualBox, you can use it in your virtual
 To add this interface to the guest virtual machine (windows xp sp3), you will need:
 
   # Go to the VirtualBox interface
-  # Select your guest os (windows xp sp3)
+  # Choose the guest os (windows xp sp3)
   # Open the configuration
   # Go to Network > Adapter 1 
   # Enable network adapter
