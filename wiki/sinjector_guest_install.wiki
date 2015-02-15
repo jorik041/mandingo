@@ -6,7 +6,7 @@ The sinjector.exe and dlltoinject.dll files are required to patch the malware pr
 
 The technique used is commonly called "inline injection". 
 
-The DLL (dlltoinject.dll) is loaded in the main process (for example in malware.exe), and is responsible of writing a "log" of each monitored windows API call. 
+The DLL (dlltoinject.dll) is loaded in the main process (for example in malware.exe), and is responsible of writing a "log" file (C:\newlog.txt) with registry each monitored windows API call. 
 
 Also, if a new process is created from this main process (ex. using CreateProcess) the DLL will be injected, so we can monitor each process called by the malicious application.
 
