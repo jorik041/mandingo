@@ -8,7 +8,7 @@ The technique used is commonly called "inline injection".
 
 The DLL (dlltoinject.dll) is loaded in the main process (for example in malware.exe), and is responsible of writing a "log" file (C:\newlog.txt) which registry each monitored windows API call. 
 
-Also, if a new process is created from this main process (ex. using CreateProcess) the DLL will be injected, so we can monitor each process called by the malicious application.
+Also, if a new process is created from this main process (ex. using CreateProcess) the DLL will be injected in this new process (or running when CreateRemoteThread is called), so we can monitor each process activity called by the "suspicious" application.
 
 = Details =
 
