@@ -7,7 +7,7 @@ You need to configure an static IP for the operating system, so we can communica
 
 = Details =
 
-Go to "control panel" > "networking" > "local area connection" > "properties" > "TCP/IP" and set:
+Start the guest os (windows xp sp3) and go to "control panel" > "networking" > "local area connection" > "properties" > "TCP/IP" and set:
 
   * IP address: 192.168.56.201
   * Subnet mask: 255.255.255.0
