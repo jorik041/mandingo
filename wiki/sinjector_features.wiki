@@ -1,0 +1,27 @@
+#Mandingo's Sandbox Features
+
+= Features =
+
+== Main features ==
+
+  * Source code available
+  * Static and dynamic analysis
+  * Windows binaries built ready for their use
+  * Documentation for installation in macosx, but can be used also in linux/unix systems (work in progress)
+  * Web interface (GUI) for ease to use
+  * Several tools available from the command line
+  * No database support required -all is stored in local files-
+  * Traffic packet capture (.pcap)
+  * Different Inline injection methods:
+    * "CreateRemoteThread" for handling normal processes
+    * "QueueUserAPC" for handling suspended processes
+  * Injection of console applications 
+  * Lot of API calls traced
+    * File operations: creation, renaming, deleting, copying...
+    * Networking operations: http opening requests, perform internet connentios, socket opening, dns lookup...
+    * Process operations: opening, creation, writing, remote thread creation, shell operations...
+    * Registry operations: creation, opening, querying, setting...
+    * Library operations: loading, getting addresses...
+  * Very few 3rd party libraries required
+
+== Web GUI features ===
