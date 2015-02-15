@@ -16,3 +16,7 @@ On this page I will tell you the steps required to properly install in your syst
 
   * [webgui_uploading_samples Uploading samples from the Web GUI]
   * [webgui_analyzing_samples Analyzing samples from the Web GUI]
+
+= Source Code =
+
+  * [sourcecode Files you can find in the Source section]
