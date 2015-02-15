@@ -1,0 +1,28 @@
+#steps required to install the Web GUI under MAMP
+
+= Introduction =
+
+For ease to use of all the applications and elements that are part of this sandboxing system or laboratory, a web GUI has been designed and coded in PHP.
+
+The requirements are minimal, since no database engines are needed at this moment or third party libraries.
+
+= Web server installation =
+
+Before installing the web application, we need to install or configure a web server that supports PHP.
+
+I've chosen MAMP for macosx, you can find it here: http://www.mamp.info/en/
+
+Simply, download the installation package and run it.
+
+Now, you have to:
+
+  * Choose a listening port (ex. 80)
+  * Choose the root folder; we will put there the PHP files (ex: ~/htdocs/)
+
+And launch the server. 
+
+Check that the server it's working ok opening the URL http://127.0.0.1/ if you are working with your local server.
+
+= Web GUI installation =
+
+ 
