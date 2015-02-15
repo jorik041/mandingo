@@ -28,7 +28,7 @@ reinject=1
 reinject_blacklist=injector.exe|POIDE.exe|ctfmon.exe|pythonw.exe
 }}}
     * Note 1: The "monitor" variable is a feature used to monitor "file writings" in some folder; not required for analyzing all malware, but present at this moment.
-    * Note 2: The "backup" is a directory where the deleted files will be saved. You will need to create this folder if it doesn't exists and you wan't to recover those deleted files.
+    * Note 2: The "backup" variable should point to a directory where the deleted files (ex. "*c:\temp*") will be saved. *You will need to create this folder* if it doesn't exists and you want to recover the deleted files.
     * Note 3: do not change the "logfile" variable. If you do that, you will need to change some scripts that request this file (ex. client.py from sinjector_client)
     * Note 4: if you don't want to monitor a specific process by its name, add it to "reinject_blacklist" with the following format: |name.exe
   * Copy the python server application "*server.pyw*" to "C:\sinjector". You can find this script in the sinjector_client sources or [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_client/server.py here]
