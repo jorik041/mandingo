@@ -1,4 +1,4 @@
-#steps required to install sinjector in the guest os
+#required steps to install sinjector (executable, dll, configuration, server script) in the guest os
 
 = Introduction =
 
