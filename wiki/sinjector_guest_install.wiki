@@ -104,3 +104,5 @@ C:\sinjector>type c:\newlog.text
 [11840 ] [RegQueryValueExW] REG_DWORD REG_DWORD_LITTLE_ENDIAN "handle(0xc0)\lfEscapement" "0"
 ...
 }}}
+
+You can continue here: [guest_snapshot Creating a working snapshot of the guest system]
