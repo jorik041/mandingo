@@ -9,7 +9,7 @@ In this section were going to download a malware sample (you can choose other yo
 
 There're lot of places in Internet for downloading malware samples. By the moment and for demonstration purposes, I'm going to fetch a "zbot" from zeus tracker.
 
-Open your browser and grab one binary from here: [https://zeustracker.abuse.ch/monitor.php?browse=binaries]
+Open your browser and grab one binary from here: [https://zeustracker.abuse.ch/monitor.php?browse=binaries _new]
 
 It's interesting to download a malware sample (zbot) that it's online (red color). That means that the C&C (Command and Control) server it's responding; or should be. So, we can generate a ".pcap" file with the network traffic for better understanding of that malware.
 
