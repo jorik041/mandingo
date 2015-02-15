@@ -42,12 +42,12 @@
 
 === Dynamic analysis ===
 
-  * Processes: PID, action (created, opened, written, alive...), status (new, running), process name. API log filtering by process ID.
-  * Libraries: libraries and methods loaded at "run time"
-  * Registry operations: writing, opening, setting and querying. 
-  * File operations: files created and deleted
-  * Networking: navigate by the .pcap graphically
-  * Desktop screenshots
+  * *Processes*: PID, action (created, opened, written, alive...), status (new, running), process name. API log filtering by process ID.
+  * *Libraries*: libraries and methods loaded at "run time"
+  * *Registry* operations: writing, opening, setting and querying. 
+  * *File* operations: files created and deleted
+  * *Networking*: navigate by the .pcap graphically
+  * Desktop *screenshots*
 
 === Tools ===
 
