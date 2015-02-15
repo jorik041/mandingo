@@ -50,9 +50,9 @@ class Config{
 ?>
 }}}
 
-And make some changes:
+And make some changes if needed:
 
-  * Choose a valid python interpreter for the variable $python
-  * Choose the path where your sinjector client scripts are installed; this was covered in the [ ] section
-  * Choose the path where the binary "radare2" was installed; this was covered in the [ ] section
-  * Choose the IP address of the guest virtual system; this was covered in the [ ] section
+  * Specify a valid python binary interpreter path for the variable *$python*
+  * Specify the path where your sinjector client scripts are installed; this was covered in the section: [https://code.google.com/p/mandingo/wiki/host_sinjector Installing the "sinjector client"]
+  * Specify the path where the binary "radare2" was installed
+  * Specify the IP address of the guest virtual system; this was covered in the section: [https://code.google.com/p/mandingo/wiki/virtual_config_ipconfig Setting the guest IP address ]
