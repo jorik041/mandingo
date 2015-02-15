@@ -8,8 +8,30 @@ https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/screenshots/webg
 
 Basically, you only have to click in the "Analyze" link after submitting the sample.
 
+= Running the analysis =
 
-== If python is not located ==
+When the analysis is running properly:
+
+  * VirtualBox should be started (popup) and the working snapshot you've configured opened.
+  * The snapshot should have get network connectivity, and you should read a message like this:
+{{{
+[info] Trying to connect to remote port (30 seconds max)...
+Error(0) - timed out
+Error(1) - timed out
+Error(2) - timed out
+[info] Remote port is open :)
+}}}
+  * After a while, the sample you want to analyze, should be uploaded to the virtual guest system:
+{{{
+Uploading sample (md5: 9d8c4d9d189d5220d10223b2089efa60)
+Sample uploaded: C:\sinjector/binary4
+}}}
+  * tcpdump should be launched for the host only interface, and you should not get any error.
+  * A initial screenshot should be taken.
+  * And you should see the rest of the output of the "sinjector.exe" client -> the API monitored for the sample (malware) you have submitted.
+
+== Some errors ==
+=== When python is not located ===
 
 If you have not configured properly the path of the python interpreter binary in "modules/config.php" you'll get an error like this:
 
@@ -31,4 +53,14 @@ Then, edit the file "modules/config.php" present with the PHP scripts of the web
 class Config{
         public static $python="/usr/bin/python";
         ...
+}}}
+=== When you don't have permissions to run "tcpdump" ===
+If you don't have permissions to run "tcpdump", you should read a message like this:
+{{{
+tcpdump: vboxnet0: You don't have permission to capture on that device
+((cannot open BPF device) /dev/bpf0: Permission denied)
+}}}
+Tip: if you fell safe enabling global suid permissions to "tcpdump", simply run:
+{{{
+$ sudo chmod a+s /usr/sbin/tcpdump
 }}}
