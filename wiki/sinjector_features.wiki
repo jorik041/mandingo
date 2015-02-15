@@ -68,14 +68,6 @@
 ==== radare2 ====
 
   * Information extraction:
-    * binary info
-    * entry point
-    * imports
-    * linked libraries
-    * relocations
-    * symbols
-    * sections
-    * strings in data section
-    * raw strings
+    * binary info, entry point, imports, linked libraries, relocations, symbols, sections, strings in data section and raw strings
   * Interactive function listing and disassemble
   * Hashing
