@@ -27,6 +27,7 @@
   * Full log, compact and very compact view modes.
   * Log highlighting. 
   * Very few 3rd party libraries required
+  * Artistic interpretation of the sections, resources, and the detected functions in the assembly.
 
 == Web GUI features ===
 
