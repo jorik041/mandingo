@@ -23,6 +23,12 @@ And launch the server.
 
 Check that the server it's working ok opening the URL http://127.0.0.1/ if you are working with your local server.
 
-= Web GUI installation =
+= PHP Web GUI installation =
+
+You can find the PHP files required to run the web gui [https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fwebgui here]
+
+Simply, download them and put it all inside the root folder that you have chosen in the previous step.
+
+Refresh the URL http://127.0.0.1/ and that's it, you should see now the web interface for the Mandingo's Sandbox :)
 
  
