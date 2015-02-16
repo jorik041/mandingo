@@ -44,7 +44,7 @@
     * .Net resources are also identified
   * *Imports*: function names, addresses, libraries, links to online documentation
   * *Strings*: unicode strings, ascii strings
-  * *Graph*: see the binary graphically. Very useful to identify compressed or encrypted parts, paddings, etc. Hexadecimal and ASCII dumping of the data, section starting markers, etc.
+  * *Graph*: graphical display if the binary. Very useful to identify compressed or encrypted parts, paddings, etc. Hexadecimal and ASCII interactive dumping of the binary data, section markers, etc.
 
 === Dynamic analysis ===
 
