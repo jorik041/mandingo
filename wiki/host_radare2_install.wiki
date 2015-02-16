@@ -17,3 +17,5 @@ $ radare2
 Usage: r2 [-dDwntLqv] [-P patch] [-p prj] [-a arch] [-b bits] [-i file]
           [-s addr] [-B blocksize] [-c cmd] [-e k=v] file|-|--|=
 }}}
+
+Go to page: [host_sinjector Installing the "sinjector_client"]
