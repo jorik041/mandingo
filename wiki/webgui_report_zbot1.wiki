@@ -175,7 +175,7 @@ $ ./scripts/reg_written.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlog.text 
 [216   ] [RegSetValueExW] REG_SZ "handle(0x1e0)\Zusytuappa" ""C:\Documents and Settings\user\Application Data\Vamop\voli.exe""
 }}}
 
-Now, we know some trick used by this sample to persist in the system against logouts and session reboots.
+Now, we know (at least) on of the tricks used by this sample to persist in the system against logouts and session reboots.
 
 === Other useful commands/scripts ===
 
