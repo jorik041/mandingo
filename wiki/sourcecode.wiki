@@ -12,7 +12,7 @@ These are all the required files I can provide you to run the Mandingo Sandbox :
 ===[https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fdlltoinject dlltoinject]===
   * DLL that will be injected in every process analyzed and each subprocess called.
 
-====[https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fsinjector_client sinjector_client]====
+===[https://code.google.com/p/mandingo/source/browse/#svn%2Ftrunk%2Fsinjector%2Fsinjector_client sinjector_client]===
   * This application should be copied at your host system (mine is macosx).
   * Its function is to stablish communications between the host operating system and the virtual machine (windows running with virtualbox).
   * Provide a serie of scripts used to parse the results of the executable samples analyzed
