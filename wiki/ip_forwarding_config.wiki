@@ -42,4 +42,27 @@ Open a "cmd.exe" console and try "ping google.com" (or browse some web page) to 
 
 There's also an script provided with sinjector with the instructions I've shown you [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_client/scripts/share_inet_hostonly_macosx.sh here]
 
+Note: if you restart your system, you will need to reenable IP forwarding. You can get the commands again running the "share_inet_hostonly_macosx.sh" script again. Ex:
+
+{{{
+$ sudo ./share_inet_hostonly_macosx.sh 
+Password:
+net.inet.ip.forwarding: 0 -> 1
+Edit /etc/pf.confg and add the following line belowe nat-anchor:
+nat on en0 from vboxnet0:network -> (en0)
+Reload: sudo pfctl -f /etc/pf.conf
+Enable: sudo pfctl -e
+$ sudo pfctl -f /etc/pf.conf
+pfctl: Use of -f option, could result in flushing of rules
+present in the main ruleset added by the system at startup.
+See /etc/pf.conf for further details.
+
+No ALTQ support in kernel
+ALTQ related functions disabled
+MacBook-Pro-de-seagate:scripts seagate$ sudo pfctl -e
+No ALTQ support in kernel
+ALTQ related functions disabled
+pf enabled
+$
+}}}
 You can continue here: [sinjector_guest_install Sinjector guest installation]
