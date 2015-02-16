@@ -105,3 +105,42 @@ ProductVersion: 6.00.8.10
 FileVersion: 6.00.8.10
 ProductName: BCB6 Evaluation Edition
 }}}
+
+Get the sections of the binary:
+
+{{{
+$ ./scripts/pe_sections.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/deleted_C\:\\sinjector\\binary4 
+('.text\x00\x00\x00', '0x1000', '0x5a68', 23552)
+('.rdata\x00\x00', '0x7000', '0x11ce', 4608)
+('.data\x00\x00\x00', '0x9000', '0x1a7b8', 1024)
+('.ndata\x00\x00', '0x24000', '0x8000', 0)
+('.rsrc\x00\x00\x00', '0x2c000', '0xbf8', 3072)
+}}}
+
+Display the packets of the ".pcap" file:
+
+{{{
+$ python ./scripts/pcap_reader.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c
+TCP 192.168.56.201 1060 87.237.198.245 80 357 "87.237.198.245" "/img/config.dll"
+TCP 192.168.56.201 1059 87.237.198.245 80 363 "87.237.198.245" "/img/config.dll"
+UDP 192.168.56.201 53185 8.8.8.8 53 34 "time.windows.com" ""
+UDP 192.168.56.201 55703 8.8.8.8 53 28 "_LDAP._TCP" ""
+UDP 192.168.56.201 59082 8.8.8.8 53 32 "www.google.com" ""
+TCP 192.168.56.201 1063 216.58.211.228 80 304 "www.google.com" "/webhp"
+UDP 192.168.56.201 64754 8.8.8.8 53 31 "www.google.es" ""
+TCP 192.168.56.201 1062 87.237.198.245 80 357 "87.237.198.245" "/img/config.dll"
+TCP 192.168.56.201 1064 216.58.211.227 80 476 "www.google.es" "/webhp?gfe_rd=cr&ei=xrThVPGwC7Sp8wfRmoKIAg"
+TCP 192.168.56.201 1061 87.237.198.245 80 363 "87.237.198.245" "/img/config.dll"
+TCP 192.168.56.201 1065 216.58.211.227 443 77 "" ""
+TCP 192.168.56.201 1065 216.58.211.227 443 314 "" ""
+UDP 192.168.56.201 60802 8.8.8.8 53 34 "crl.geotrust.com" ""
+TCP 192.168.56.201 1066 23.54.133.163 80 188 "crl.geotrust.com" "/crls/secureca.crl"
+UDP 192.168.56.201 61110 8.8.8.8 53 34 "time.windows.com" ""
+UDP 192.168.56.201 60615 8.8.8.8 53 32 "pki.google.com" ""
+TCP 192.168.56.201 1067 216.58.211.238 80 178 "pki.google.com" "/GIAG2.crl"
+TCP 192.168.56.201 1065 216.58.211.227 443 512 "" ""
+UDP 192.168.56.201 61294 8.8.8.8 53 28 "_LDAP._TCP" ""
+TCP 192.168.56.201 1062 87.237.198.245 80 609 "87.237.198.245" "/img/gate.php"
+UDP 192.168.56.201 137 192.168.56.255 137 50 "" ""
+...
+}}}
