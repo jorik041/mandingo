@@ -1,4 +1,4 @@
-#installation of radare2 application
+#installation of the 3rd party application: radare2
 
 = Installation process =
 
