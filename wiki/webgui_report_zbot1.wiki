@@ -1,6 +1,6 @@
 #report generated for the "zbot" malware sample 353f3b54de9ecfd82c63a2aeaf1c3b9c
 
-= Introduction =
+= Analyzing a "zbot" sample =
 
 To shown you some of results you can obtain with the "Mandingo's Sandbox", I've downloaded one "zbot" malware sample from "zeustracker" that it's currently alive (C&C is on). The MD5 hash for this sample is: 353f3b54de9ecfd82c63a2aeaf1c3b9c
 
