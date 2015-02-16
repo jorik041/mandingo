@@ -125,3 +125,5 @@
   # LoadLibraryA
   # LoadLibraryW
 }}}
+
+Go to wiki [https://code.google.com/p/mandingo/wiki/MandingoSandbox index] page
