@@ -78,7 +78,7 @@ MD5 (deleted_C:\sinjector\binary4) = 353f3b54de9ecfd82c63a2aeaf1c3b9c
 
 Some files can be easy displayed from the console, for example the generated text files, so you can "grep" or parse them with any tool. There're several tools in the "sinjector_client/scripts" folder to parse those files, also the binaries.
 
-For example, to get the deleted files from "newlog.text" you can run:
+For example, to get the deleted from the sample analyzed, you can run "./scripts/deleted_files.py" against "newlog.text":
 {{{
 $ ./scripts/deleted_files.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlog.text 
 C:\DOCUME~1\user\LOCALS~1\Temp\nseF.tmp|1544
@@ -97,7 +97,71 @@ C:\Documents and Settings\user\Local Settings\Temporary Internet Files\Content.I
 C:\sinjector\binary4|912
 }}}
 
-To read the version information of the deleted filed (the submitted one):
+Let's see if some ".exe" file was dropped in the system with "created_files.py" and "grep":
+
+{{{
+$ ./scripts/created_files.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlog.text|grep exe
+C:\Documents and Settings\user\Application Data\Vamop\voli.exe|328
+}}}
+
+The number "328" after the character "|" is the process that created (dropped) "voli.exe".
+
+With "parse_log.py" we can see what was the behavior of the sample, filter by process (-pid), filter out the registry calls (-reg), and the procedure calls (-proc)
+
+{{{
+$ ./scripts/parse_log.py 
+Usage: ./scripts/parse_log.py <sinjector_logfile> [-pid pid] [-reg] [-proc]
+}}}
+
+Let's see a very compact view of the process "328":
+
+{{{
+$ ./scripts/parse_log.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlog.text -pid 328 -reg -proc
+[328   ] [CreateFileW (gREA gWRI OE 0xc0000000)] \\.\PIPE\lsarpc
+[328   ] [CreateFileW (OE 0x0)] C:\WINDOWS\
+[328   ] [CreateFileW (OE 0x0)] \\.\MountPointManager
+[328   ] [RegCreateKeyExW] handle=0xe0 MAXIMUM_ALLOWED "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders"
+[328   ] [RegCreateKeyExW] handle=0xe0 MAXIMUM_ALLOWED "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders"
+[328   ] [RegSetValueExW] REG_SZ "handle(0xe0)\AppData" "C:\Documents and Settings\user\Application Data"
+[328   ] [CreateFileW (gREA OE 0x80000000)] C:\sinjector\binary4
+[328   ] [CreateFileW (gREA gWRI OE 0xc0000000)] C:\Documents and Settings\user\Application Data\Vamop\voli.exe
+[328   ] [CreateFileW (gREA gWRI OE 0xc0000000)] C:\Documents and Settings\user\Application Data\Nouc\uwutu.idr
+[328   ] [CreateFileW (gREA gWRI OE 0xc0000000)] C:\Documents and Settings\user\Application Data\Dosed\izymw.aky
+[328   ] [RegCreateKeyExW] handle=0xe8 ALL_ACCESS "HKCU\SOFTWARE\Microsoft"
+[328   ] [RegCreateKeyExW] handle=0xec ALL_ACCESS "handle(0xe8)\Vowee"
+[328   ] [Sleep] 20
+[328   ] [CreateFileW (gWRI OE 0x40000000)] C:\Documents and Settings\user\Application Data\Vamop\voli.exe
+[328   ] [CreateFileW (gREA OE 0x80000000)] C:\Documents and Settings\user\Application Data
+[328   ] [CreateFileW (fWattr OE 0x100)] C:\Documents and Settings\user\Application Data\Vamop\voli.exe
+[328   ] [CreateFileW (fWattr OE 0x100)] C:\Documents and Settings\user\Application Data\Vamop
+[328   ] [CreateFileW (fWattr OE 0x100)] C:\Documents and Settings\user\Application Data\Nouc\uwutu.idr
+[328   ] [CreateFileW (fWattr OE 0x100)] C:\Documents and Settings\user\Application Data\Nouc
+[328   ] [CreateFileW (fWattr OE 0x100)] C:\Documents and Settings\user\Application Data\Dosed\izymw.aky
+[328   ] [CreateFileW (fWattr OE 0x100)] C:\Documents and Settings\user\Application Data\Dosed
+[328   ] [CreateProcessW] PID=1544 Handle=244 Thread=248 "" "C:\Documents and Settings\user\Application Data\Vamop\voli.exe"
+[328   ] [REINJECT] "C:\sinjector\sinjector.exe" /p 1544  
+[328   ] [CreateFileW (gWRI OE 0x40000000)] C:\DOCUME~1\user\LOCALS~1\Temp\tmp172d10c8.bat
+[328   ] [CreateFileW (gREA OE 0x80000000)] C:\WINDOWS\system32\cmd.exe
+[328   ] [CreateProcessW] PID=912 Handle=248 Thread=232 "" "C:\WINDOWS\system32\cmd.exe" /c "C:\DOCUME~1\user\LOCALS~1\Temp\tmp172d10c8.bat"
+}}}
+
+In the log above we can see lot of the behavior of this malware, don't you think? :)
+
+Let's see what is that ".bat" file:
+
+{{{
+$ cat results/353f3b54de9ecfd82c63a2aeaf1c3b9c/deleted_C\:\\DOCUME~1\\user\\LOCALS~1\\Temp\\tmp172d10c8.bat 
+@echo off
+:d
+del "C:\sinjector\binary4"
+if exist "C:\sinjector\binary4" goto d
+del /F "C:\DOCUME~1\user\LOCALS~1\Temp\tmp172d10c8.bat"
+}}}
+
+Ok, some bat script for removing the original file (C:\sinjector\binary4) and himself.
+
+=== Other useful commands/scripts ===
+Read the version information of the deleted filed (the submitted one):
 
 {{{
 $ ./scripts/pe_fileinfo.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/deleted_C\:\\sinjector\\binary4 
@@ -144,3 +208,122 @@ TCP 192.168.56.201 1062 87.237.198.245 80 609 "87.237.198.245" "/img/gate.php"
 UDP 192.168.56.201 137 192.168.56.255 137 50 "" ""
 ...
 }}}
+
+Show the affected processes:
+
+{{{
+$ ./scripts/affected_processes.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlog.text |sort
+1016   written  unknown unknown
+1108   open     running svchost.exe      
+1140   written  unknown unknown
+1152   alive    running explorer.exe
+1152   open     running explorer.exe
+1152   rthread  running explorer.exe
+1152   written  running explorer.exe
+1216   open     running svchost.exe      
+1292   open     running svchost.exe      
+1408   created      new C:\sinjector/binary4
+1504   open     running spoolsv.exe      
+152    open     running vboxtray.exe     
+152    rthread  running vboxtray.exe     
+152    written  running vboxtray.exe     
+1544   created      new "" "C:\Documents and Settings\user\Application Data\Vamop\voli.exe"
+1632   created      new "C:\WINDOWS\system32\ipconfig.exe" ipconfig /all
+1632   written      new "C:\WINDOWS\system32\ipconfig.exe" ipconfig /all
+1920   open     running explorer.exe     
+1920   rthread  running explorer.exe     
+1920   written  running explorer.exe     
+196    open     running jusched.exe      
+196    rthread  running jusched.exe      
+196    written  running jusched.exe      
+2028   created      new "C:\Documents and Settings\user\Application Data\Vamop\voli.exe" (null)
+2028   written      new "C:\Documents and Settings\user\Application Data\Vamop\voli.exe" (null)
+2036   written  unknown unknown
+216    open     running ctfmon.exe       
+216    rthread  running ctfmon.exe       
+216    written  running ctfmon.exe       
+2276   written  unknown unknown
+2300   open       other C:\WINDOWS\explorer.exe?
+2300   rthread    other C:\WINDOWS\explorer.exe?
+2300   written    other C:\WINDOWS\explorer.exe?
+2356   created      new "" cmd.exe
+2356   written      new "" cmd.exe
+2628   open       other C:\WINDOWS\explorer.exe
+2628   rthread    other C:\WINDOWS\explorer.exe
+2628   written    other C:\WINDOWS\explorer.exe
+2912   created      new "" cmd.exe
+2912   written      new "" cmd.exe
+3000   written  unknown unknown
+3132   created      new "C:\WINDOWS\system32\hostname.exe" hostname
+3132   written      new "C:\WINDOWS\system32\hostname.exe" hostname
+3144   written  unknown unknown
+3276   created      new "C:\WINDOWS\system32\tasklist.exe" tasklist
+3276   written      new "C:\WINDOWS\system32\tasklist.exe" tasklist
+328    created      new "C:\sinjector\binary4" (null)
+328    written      new "C:\sinjector\binary4" (null)
+3288   written  unknown unknown
+3360   alive    running wmiprvse.exe
+3408   open       other C:\WINDOWS\explorer.exe
+3408   rthread    other C:\WINDOWS\explorer.exe
+3408   written    other C:\WINDOWS\explorer.exe
+3564   written  unknown unknown
+368    open     running smss.exe         
+3704   written  unknown unknown
+3884   written  unknown unknown
+392    open     running alg.exe          
+3940   written  unknown unknown
+4064   created      new "C:\WINDOWS\system32\tasklist.exe" tasklist
+4064   written      new "C:\WINDOWS\system32\tasklist.exe" tasklist
+4084   written  unknown unknown
+4088   open     running pythonw.exe      
+4088   rthread  running pythonw.exe      
+4088   written  running pythonw.exe      
+476    created      new "C:\WINDOWS\system32\netsh.exe" netsh firewall set opmode disable
+476    written      new "C:\WINDOWS\system32\netsh.exe" netsh firewall set opmode disable
+576    open     running svchost.exe      
+612    open     running csrss.exe        
+636    open     running winlogon.exe     
+680    open     running services.exe     
+692    open     running lsass.exe        
+844    open     running vboxservice.exe  
+852    open     running wscntfy.exe      
+852    rthread  running wscntfy.exe      
+852    written  running wscntfy.exe      
+888    open     running svchost.exe      
+912    created      new "" "C:\WINDOWS\system32\cmd.exe" /c "C:\DOCUME~1\user\LOCALS~1\Temp\tmp172d10c8.bat"
+976    open     running svchost.exe
+}}}
+
+Display the compression rate of the file, useful to detect compressed/encrypted zones and also odd paddings: 
+
+{{{
+$ ./scripts/compression_rate.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/deleted_C\:\\sinjector\\binary4 
+Name PointerToRawData SizeOfRawData VirtualAddress Flags Entropy Dir
+.text 0x400 0x5c00 0x1000 code,read,execute 6.4186984047 
+.rdata 0x6000 0x1200 0x7000 data,read 5.23558258678 IMAGE_DIRECTORY_ENTRY_IAT
+.data 0x7200 0x400 0x9000 data,read,write 4.87122636881 
+.ndata 0x0 0x0 0x24000 read,write 0.0 
+.rsrc 0x7600 0xc00 0x2c000 data,read 4.46440305751 IMAGE_DIRECTORY_ENTRY_RESOURCE
+0 0.629739531817 ".ndata .text" ".ndata .text"
+3033 0.720408836136 ".text" ""
+6066 0.739861523244 ".text" ""
+9099 0.725024727992 ".text" ""
+12132 0.708869106495 ".text" ""
+15165 0.712495878668 ".text" ""
+18198 0.757006264425 ".text" ""
+21231 0.615891856248 ".text" ""
+24264 0.377184305968 ".text .rdata" ".rdata"
+27297 0.534454335641 ".data .rdata .rsrc" ".data .rsrc"
+30330 0.475107154632 ".rsrc" ""
+33363 1.0 "padding?" "padding?"
+36396 1.0 "padding?" ""
+39429 1.0 "padding?" ""
+...
+297234 1.0 "padding?" ""
+300267 1.0 "padding?" ""
+303300 1.0 "padding?" ""
+}}}
+
+Too much padding before the last declared section (.rsrc), don't you think? Also, the compression rate is "1", that means that the data couldn't be compressed more with "zlib", so, probably it's already compressed.
+
+If you make a graph for this -this is done automatically from the web guy- you can imagine that this binary has something clearly "not declared" inside him.
