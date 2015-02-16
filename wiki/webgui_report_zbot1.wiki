@@ -12,9 +12,9 @@ This sample was uploaded to the sandbox from the Web GUI, and was running and mo
 
 = Working from the console =
 
-Before showing you the results in the Web GUI, let's check first what was generated from the console, and see what we can do working in "text mode".
+Let's see what files were generated from the console as the result of the analysis, and see what we can do working in "text mode".
 
-After analyzing the sample, the results are automaticaly stored in the folder "sinjector_client/results/", subfolder "353f3b54de9ecfd82c63a2aeaf1c3b9c" (MD5 hash of the sample), so we can move there, and see what we have:
+After analyzing the sample, the results were automaticaly stored in the folder "sinjector_client/results/", subfolder "353f3b54de9ecfd82c63a2aeaf1c3b9c" (MD5 hash of the sample), so we can move there, and see what we have:
 
 {{{
 $ ls
