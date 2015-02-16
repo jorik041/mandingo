@@ -19,7 +19,7 @@ Usage: ./client.py <host> <sample> (ex: 192.168.56.101 fileToAnalyze.ex_)
 $ ./client.py 192.168.56.201 samples/ZeuS_binary_353f3b54de9ecfd82c63a2aeaf1c3b9c.ex_ 
 }}}
 
-This sample was running and monitored during 1 minute in the virtual guest os "Windows XP SP3 32bit"
+This sample was running and monitored during 1 minute in the virtual guest os "Windows XP SP3 32bit"; you can change the amount of time dedicated to the analysis modifying the variable "SECONDS=60" of the "client.py" script.
 
 = Working from the console =
 
