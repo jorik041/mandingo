@@ -361,7 +361,7 @@ Name PointerToRawData SizeOfRawData VirtualAddress Flags Entropy Dir
 
 Too much padding before the last declared section (.rsrc), don't you think? Also, the compression rate is "1", that means that the data couldn't be compressed more with "zlib", so, probably it's already compressed.
 
-If graph for this data -this is done automatically from the web gui- you can imagine that this binary has something clearly "not declared" inside him.
+If you graph this data -this is done automatically from the web gui-, you can "imagine" that this binary... has something clearly undeclared inside him.
 
 https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/webgui/webgui_zeus1_graph.png
 
