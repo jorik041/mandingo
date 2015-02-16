@@ -8,7 +8,7 @@ The MD5 hash for this sample is "353f3b54de9ecfd82c63a2aeaf1c3b9c" and you can f
 
 https://zeustracker.abuse.ch/monitor.php?browse=binaries&filter=online
 
-This sample was uploaded to the sandbox from the Web GUI, and was running and monitored during 1 minute, in a virtual guest os "Windows SP SP3 32bit"
+This sample was uploaded to the sandbox from the Web GUI, and was running and monitored during 1 minute, in a virtual guest os "Windows XP SP3 32bit"
 
 = Working from the console =
 
