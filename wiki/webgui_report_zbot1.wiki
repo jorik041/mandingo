@@ -10,7 +10,7 @@ https://zeustracker.abuse.ch/monitor.php?browse=binaries&filter=online
 
 = Working from the command line =
 
-You can submit the sample from the command line with the "client.py" script -provided in the "sinjector_client" folder-, using as arguments:
+You can submit this sample from the command line with the "client.py" script -provided in the "sinjector_client" folder-, using as arguments:
 
   # the IP address of the guest system 
   # and the path of the sample you want to analyze
