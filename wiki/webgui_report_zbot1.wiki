@@ -178,7 +178,8 @@ $ ./scripts/reg_written.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlog.text 
 Now, we know some trick used by this sample to persist in the system against logouts and session reboots.
 
 === Other useful commands/scripts ===
-Read the version information of the deleted filed (the submitted one):
+
+===Read the version information====
 
 {{{
 $ ./scripts/pe_fileinfo.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/deleted_C\:\\sinjector\\binary4 
@@ -187,7 +188,7 @@ FileVersion: 6.00.8.10
 ProductName: BCB6 Evaluation Edition
 }}}
 
-Get the sections of the binary:
+====Get the sections of the binary====
 
 {{{
 $ ./scripts/pe_sections.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/deleted_C\:\\sinjector\\binary4 
@@ -198,7 +199,7 @@ $ ./scripts/pe_sections.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/deleted_C\:\
 ('.rsrc\x00\x00\x00', '0x2c000', '0xbf8', 3072)
 }}}
 
-Display the packets of the ".pcap" file:
+====Display the network traffic (.pcap) ====
 
 {{{
 $ python ./scripts/pcap_reader.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c
@@ -226,7 +227,22 @@ UDP 192.168.56.201 137 192.168.56.255 137 50 "" ""
 ...
 }}}
 
-Show the affected processes:
+We can dump a specific packet content if we provide the number of the packet:
+
+{{{
+$ python ./scripts/pcap_reader.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c 1
+POST /img/config.dll HTTP/1.1
+Accept: */*
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET4.0C; .NET4.0E)
+Host: 87.237.198.245
+Content-Length: 122
+Connection: Keep-Alive
+Cache-Control: no-cache
+
+???????f?b[?wOT?YX٤ޢXb???"4D]A?&?Xsbٵ?:`?A???T??b???2Q??^1űXA?N?J??????}?N?????[?[?E.??
+}}}
+
+====Show the affected processes====
 
 {{{
 $ ./scripts/affected_processes.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlog.text |sort
@@ -311,7 +327,9 @@ $ ./scripts/affected_processes.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlo
 976    open     running svchost.exe
 }}}
 
-Display the compression rate of the file, useful to detect compressed/encrypted zones and also odd paddings: 
+====Display the compression rate of the file====
+
+Useful to detect compressed/encrypted zones and also odd paddings: 
 
 {{{
 $ ./scripts/compression_rate.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/deleted_C\:\\sinjector\\binary4 
