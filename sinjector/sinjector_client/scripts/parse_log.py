@@ -5,7 +5,7 @@ import sys
 pid=""
 
 if len(sys.argv)<2:
-	print "Usage: %s <sinjector_logfile> [pid]"
+	print "Usage: %s <sinjector_logfile> [-pid pid] [-reg] [-proc]" % sys.argv[0]
 	sys.exit()
 
 logfile=sys.argv[1]
@@ -17,7 +17,7 @@ if len(sys.argv)>2:
 			noreg=True
 		if sys.argv[i]=="-proc":
 			nogetproc=True
-		if sys.argv[i]=="-pid":
+		if sys.argv[i] in ("-pid","-p"):
 			pid=sys.argv[i+1]
 
 with open(logfile,"r") as f:
