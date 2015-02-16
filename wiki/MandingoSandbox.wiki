@@ -20,7 +20,7 @@ You can see a list of the current features [sinjector_features here]
 
 = Examples =
 
-  # Reports generated for the "zbot" malware sample: 353f3b54de9ecfd82c63a2aeaf1c3b9c
+  * Reports generated for the "zbot" malware sample "353f3b54de9ecfd82c63a2aeaf1c3b9c"
     * [webgui_report_zbot1 Working from the console]
 
 = Source Code =
