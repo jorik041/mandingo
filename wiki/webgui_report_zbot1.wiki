@@ -160,6 +160,23 @@ del /F "C:\DOCUME~1\user\LOCALS~1\Temp\tmp172d10c8.bat"
 
 Ok, some bat script for removing the original file (C:\sinjector\binary4) and himself.
 
+Finally, let's use the "script/reg_write.py" to see a particular changes in the registry related with executables (filtering by the "exe" string):
+
+{{{
+$ ./scripts/reg_written.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlog.text |grep exe|head -1
+[216   ] [RegSetValueExW] REG_SZ "handle(0x1e0)\Zusytuappa" ""C:\Documents and Settings\user\Application Data\Vamop\voli.exe""
+}}}
+
+If we run the script again, and give for parameters the "pid" (216) and the "handle" (0x1e0) we can get some backward information, the creation/opening command that gave that handle:
+
+{{{
+$ ./scripts/reg_written.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/newlog.text 216 0x1e0
+[216   ] [RegCreateKeyExW] handle=0x1e0 ALL_ACCESS "HKCU\Software\Microsoft\Windows\Currentversion\Run"
+[216   ] [RegSetValueExW] REG_SZ "handle(0x1e0)\Zusytuappa" ""C:\Documents and Settings\user\Application Data\Vamop\voli.exe""
+}}}
+
+Now, we know some trick used by this sample to persist in the system against logouts and session reboots.
+
 === Other useful commands/scripts ===
 Read the version information of the deleted filed (the submitted one):
 
