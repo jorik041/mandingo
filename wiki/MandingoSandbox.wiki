@@ -13,12 +13,12 @@ You can see a list of the current features [sinjector_features here]
   # [guest_snapshot Creating a working snapshot of the guest system]
   # [host_config Install the host applications and configuring it]
 
-= Usage =
+= Checks =
 
-  # [webgui_uploading_samples Uploading samples from the Web GUI]
-  # [webgui_analyzing_samples Analyzing samples from the Web GUI]
+  # [webgui_uploading_samples Uploading a sample from the Web GUI]
+  # [webgui_analyzing_samples Analyzing a sample from the Web GUI]
 
-= Examples =
+= Real usage examples =
 
   * Reports generated for the "zbot" malware sample "353f3b54de9ecfd82c63a2aeaf1c3b9c"
     * [webgui_report_zbot1 Working from the command line]
