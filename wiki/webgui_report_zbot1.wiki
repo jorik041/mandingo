@@ -8,15 +8,18 @@ The MD5 hash for this sample is "353f3b54de9ecfd82c63a2aeaf1c3b9c" and you can f
 
 https://zeustracker.abuse.ch/monitor.php?browse=binaries&filter=online
 
-This sample was uploaded to the sandbox from the Web GUI, and was running and monitored during 1 minute, in a virtual guest os "Windows XP SP3 32bit"
+You can submit the sample from the command line with the "client.py" script -provided in the "sinjector_client" folder-, using as arguments:
 
-You can submit the sample also from the command line with the "client.py" script, giving as arguments the IP address of the guest system and the path of the sample you want to analyze:
+  # the IP address of the guest system 
+  # and the path of the sample you want to analyze
 
 {{{
 $ ./client.py 
 Usage: ./client.py <host> <sample> (ex: 192.168.56.101 fileToAnalyze.ex_)
 $ ./client.py 192.168.56.201 samples/ZeuS_binary_353f3b54de9ecfd82c63a2aeaf1c3b9c.ex_ 
 }}}
+
+This sample was running and monitored during 1 minute in the virtual guest os "Windows XP SP3 32bit"
 
 = Working from the console =
 
