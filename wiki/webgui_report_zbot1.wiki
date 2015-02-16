@@ -10,7 +10,7 @@ https://zeustracker.abuse.ch/monitor.php?browse=binaries&filter=online
 
 This sample was uploaded to the sandbox from the Web GUI, and was running and monitored during 1 minute, in a virtual guest os "Windows XP SP3 32bit"
 
-You can submit the sample also from the command line with the "client.py" script, giving as argument the IP address of the hosts, and the path of the sample you want to analyze:
+You can submit the sample also from the command line with the "client.py" script, giving as arguments the IP address of the guest system and the path of the sample you want to analyze:
 
 {{{
 $ ./client.py 
