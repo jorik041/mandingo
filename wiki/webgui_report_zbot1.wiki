@@ -12,9 +12,9 @@ This sample was uploaded from the Web GUI, and was running and monitored during 
 
 = Working from the console =
 
-Before showing you the results in the Web GUI, let's check first what was generated from the console.
+Before showing you the results in the Web GUI, let's check first what was generated from the console, and see what we can do working in "text mode".
 
-The results of the analysis were stored in the folder "sinjector_client/results/353f3b54de9ecfd82c63a2aeaf1c3b9c/"
+After analyzing the sample, the results of the were automaticaly stored in the folder "sinjector_client/results/353f3b54de9ecfd82c63a2aeaf1c3b9c/", so we can move there and see what we have:
 
 {{{
 $ ls
