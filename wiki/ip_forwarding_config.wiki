@@ -40,7 +40,7 @@ Open a "cmd.exe" console and try "ping google.com" (or browse some web page) to 
 
 = share_inet_hostonly_macosx.sh =
 
-There's also an script provided with sinjector with the instructions I've shown you [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_client/scripts/share_inet_hostonly_macosx.sh here]
+There's also an script provided with sinjector with the instructions [https://code.google.com/p/mandingo/source/browse/trunk/sinjector/sinjector_client/scripts/share_inet_hostonly_macosx.sh here]
 
 Note: if you restart your system, you will need to reenable IP forwarding. You can get the commands again running the "share_inet_hostonly_macosx.sh" script again. Ex:
 
