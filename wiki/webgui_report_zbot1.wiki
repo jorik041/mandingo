@@ -13,7 +13,7 @@ https://zeustracker.abuse.ch/monitor.php?browse=binaries&filter=online
 You can submit this sample from the command line with the "client.py" script -provided with the "sinjector_client" application and located in their main folder-, using as arguments:
 
   # the IP address of the guest system 
-  # and the path of the sample you want to analyze
+  # the path of the sample you want to analyze
 
 {{{
 $ ./client.py 
