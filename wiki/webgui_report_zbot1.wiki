@@ -8,6 +8,8 @@ The MD5 hash for this sample is "353f3b54de9ecfd82c63a2aeaf1c3b9c" and you can f
 
 https://zeustracker.abuse.ch/monitor.php?browse=binaries&filter=online
 
+= Working from the command line =
+
 You can submit the sample from the command line with the "client.py" script -provided in the "sinjector_client" folder-, using as arguments:
 
   # the IP address of the guest system 
@@ -20,8 +22,6 @@ $ ./client.py 192.168.56.201 samples/ZeuS_binary_353f3b54de9ecfd82c63a2aeaf1c3b9
 }}}
 
 This sample was running and monitored during 1 minute in the virtual guest os "Windows XP SP3 32bit"; you can change the amount of time dedicated to the analysis modifying the variable "SECONDS=60" of the "client.py" script.
-
-= Working from the console =
 
 Let's see what files were generated from the console as the result of the analysis, and see what we can do working in "text mode".
 
