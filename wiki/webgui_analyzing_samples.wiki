@@ -12,8 +12,9 @@ Basically, you only have to click in the "Analyze" link after submitting the sam
 
 When the analysis is running properly:
 
-  * VirtualBox should be started (popup) and the working snapshot you've configured opened.
-  * The snapshot should have get network connectivity, and you should read a message like this:
+  * VirtualBox should be started (popup) and the working snapshot you've configured should be opened.
+  * When the snapshot get network connectivity, you should read the message "Remote port is open"
+
 {{{
 [info] Trying to connect to remote port (30 seconds max)...
 Error(0) - timed out
@@ -21,7 +22,7 @@ Error(1) - timed out
 Error(2) - timed out
 [info] Remote port is open :)
 }}}
-  * After a while, the sample you want to analyze, should be uploaded to the virtual guest system:
+  * After a while, the sample you want to analyze should be automatically uploaded to the virtual guest system:
 {{{
 Uploading sample (md5: 9d8c4d9d189d5220d10223b2089efa60)
 Sample uploaded: C:\sinjector/binary4
