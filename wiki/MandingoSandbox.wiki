@@ -15,8 +15,8 @@ You can see a list of the current features [sinjector_features here]
 
 = Checks =
 
-  # [webgui_uploading_samples Uploading a sample from the Web GUI]
-  # [webgui_analyzing_samples Analyzing a sample from the Web GUI]
+  # [webgui_uploading_samples Uploading samples from the Web GUI]
+  # [webgui_analyzing_samples Analyzing samples from the Web GUI]
 
 = Real usage examples =
 
