@@ -365,6 +365,6 @@ If you graph this data -this is done automatically from the web gui-, you can "i
 
 https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/webgui/webgui_zeus1_graph.png
 
-There're more commands, and more features available from the web gui, this page was thought only to shown you the basics of this sandbox engine/lab to analyze some arbitrary samples :)
+There're more commands, and more features available from the web gui. This only a demonstration to shown you some of the basics of this sandbox engine/laboratory, useful to analyze arbitrary windows executables :)
 
-If you want to know more, go to the [https://code.google.com/p/mandingo/wiki/MandingoSandbox main page] of this wiki
+If you want to know more about this sandbox and features, visit the  [https://code.google.com/p/mandingo/wiki/MandingoSandbox main page] of this wiki
