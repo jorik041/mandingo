@@ -10,7 +10,7 @@ https://zeustracker.abuse.ch/monitor.php?browse=binaries&filter=online
 
 This sample was uploaded from the Web GUI, and was running and monitored during 1 minute, in a virtual guest os "Windows SP SP3 32bit"
 
-= Results viewed from the console =
+= Working from the console =
 
 Before showing you the results in the Web GUI, let's check first what was generated from the console.
 
