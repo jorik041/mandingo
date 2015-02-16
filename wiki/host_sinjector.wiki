@@ -86,6 +86,6 @@ sudo pip install dpkt
 Install "monodevelop" and "radare2" in your system.
 
   * "Monodevelop" can be easily downloaded and installed from the package located in the http://www.monodevelop.com web page.
-  * You can find "radare2" in github https://github.com/radare/radare2
+  * You can find "radare2" in github https://github.com/radare/radare2. The installation process is very simple, if you need the instructions read [host_radare2_install this page]
  
 You can continue here: [host_webgui Installing the Web GUI under MAMP]
