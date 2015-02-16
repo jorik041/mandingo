@@ -13,7 +13,7 @@
   * No database support required -all is stored in local files-
   * Traffic packet capture (.pcap)
   * Automatically fetch any created (dropped?) or deleted file by the sample analyzed
-  * Different Inline injection methods used:
+  * Different injection methods used:
     * "CreateRemoteThread" for handling normal processes
     * "QueueUserAPC" for handling suspended processes
   * Injection support for windows console applications
