@@ -10,6 +10,14 @@ https://zeustracker.abuse.ch/monitor.php?browse=binaries&filter=online
 
 This sample was uploaded to the sandbox from the Web GUI, and was running and monitored during 1 minute, in a virtual guest os "Windows XP SP3 32bit"
 
+You can submit the sample also from the command line with the "client.py" script, giving as argument the IP address of the hosts, and the path of the sample you want to analyze:
+
+{{{
+$ ./client.py 
+Usage: ./client.py <host> <sample> (ex: 192.168.56.101 fileToAnalyze.ex_)
+$ ./client.py 192.168.56.201 samples/ZeuS_binary_353f3b54de9ecfd82c63a2aeaf1c3b9c.ex_ 
+}}}
+
 = Working from the console =
 
 Let's see what files were generated from the console as the result of the analysis, and see what we can do working in "text mode".
