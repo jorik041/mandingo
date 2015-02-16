@@ -179,7 +179,7 @@ Now, we know some trick used by this sample to persist in the system against log
 
 === Other useful commands/scripts ===
 
-===Read the version information====
+====Read the version information=====
 
 {{{
 $ ./scripts/pe_fileinfo.py results/353f3b54de9ecfd82c63a2aeaf1c3b9c/deleted_C\:\\sinjector\\binary4 
@@ -364,3 +364,5 @@ Too much padding before the last declared section (.rsrc), don't you think? Also
 If graph for this data -this is done automatically from the web gui- you can imagine that this binary has something clearly "not declared" inside him.
 
 https://mandingo.googlecode.com/svn/trunk/screenshots/sinjector/webgui/webgui_zeus1_graph.png
+
+There're more commands, and more features available from the web gui, this page was thought only to shown you the basics of this sandbox engine/lab to analyze some arbitrary samples :)
