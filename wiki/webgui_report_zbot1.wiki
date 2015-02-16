@@ -106,7 +106,7 @@ C:\Documents and Settings\user\Application Data\Vamop\voli.exe|328
 
 The number "328" after the character "|" is the process that created (dropped) "voli.exe".
 
-With "parse_log.py" we can see what was the behavior of the sample, filter by process (-pid), filter out the registry calls (-reg), and the procedure calls (-proc)
+With "parse_log.py" we can see what was the behavior of the sample, filter by process (-pid), and filter out the registry calls (-reg) or procedure calls (-proc) so we can get a more compact view.
 
 {{{
 $ ./scripts/parse_log.py 
