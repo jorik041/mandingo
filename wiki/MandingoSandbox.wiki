@@ -12,6 +12,7 @@ You can see a list of the current features [sinjector_features here]
   # [virtual_config Virtual guest operating system configuration]
   # [guest_snapshot Creating a working snapshot of the guest system]
   # [host_config Install the host applications and configuring it]
+  # [vbox_antidetection_tips Virtual Box anti-detection tips]
 
 = Checks =
 
