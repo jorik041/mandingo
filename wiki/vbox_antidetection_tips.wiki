@@ -7,6 +7,6 @@ Here I'll try to cover some anti-detection tips you may take in you virtual box 
 
 = Tips =
 
-  * Remove the processes: 
+  * Remove (kill) the following processes: 
     * vboxtray.exe
     * vboxservice.exe
