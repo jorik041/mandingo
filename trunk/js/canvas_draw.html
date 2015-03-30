@@ -1,0 +1,60 @@
+<script>
+var time;
+var x=0;
+var canvas;
+var ctx;
+var mouse_x="",mouse_y=""
+var mouse_ox="",mouse_oy=""
+var mouse_down=false;
+
+function init(){
+	canvas=document.getElementById("canvas");
+	ctx=canvas.getContext("2d");
+
+	canvas.addEventListener('mousemove', function(evt) {
+		var rect = canvas.getBoundingClientRect();
+	    mouse_x=evt.clientX - rect.left;
+	    mouse_y=evt.clientY - rect.top;
+	 });
+	canvas.addEventListener('mousedown', function(evt) {
+		mouse_ox=mouse_x;
+		mouse_oy=mouse_y;
+		mouse_down=true;
+	});
+	canvas.addEventListener('mouseup', function(evt) {
+		mouse_down=false;
+	});
+
+	draw();
+}
+function line(ox,oy,x,y){
+	ctx.beginPath();
+    ctx.moveTo(ox, oy);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+	mouse_ox=x;
+	mouse_oy=y;
+}
+function draw() {
+    requestAnimationFrame(draw);
+    var now = new Date().getTime(),
+        dt = now - (time || now);
+ 
+    time = now;
+ 
+    //draw
+    /*
+    canvas.width=canvas.width
+    ctx.font="30px Georgia";
+    ctx.fillStyle="blue"
+	ctx.fillText(mouse_x+","+mouse_y+" "+mouse_down,20,40);
+	*/
+	if(mouse_down) line(mouse_ox,mouse_oy,mouse_x,mouse_y)
+
+    x+= 10 * dt;
+}
+
+</script>
+<body onLoad=javascript:init()>
+<canvas id="canvas" width=600 height=600 style="background:gray">
+</body>
